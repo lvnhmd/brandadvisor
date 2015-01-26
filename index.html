@@ -18,10 +18,18 @@
 
 
     <!-- GooglePlacesAPIExample begin -->
+<!--
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false"></script>
     <script src="js/script.js"></script>
+-->
     <!-- GooglePlacesAPIExample end -->
+
+    <!-- Google Autocomplete begin -->
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&libraries=places"></script>
+    <script src="js/autocomplete.js"></script>
+    <!-- Google Autocomplete end -->
+
 </head>
 
 <body class="ltr globalNav2011_reset">
@@ -135,11 +143,13 @@ Review a shop </span>
                                             <div id="ptptHotels" class="ptptContent active loaded">
                                                 <div class="wrap">
                                                     <!--    <input id="gmap_where" type="text" name="gmap_where" class="big_text sHotels fl focusInput focusClear no_cpu typeahead beforeOnLoad" tabindex="1" autocomplete="off" onfocus="ta.trackEventOnPage('PYPT_search', 'hotel', 'focus', 0, false);" value="my location is...">-->
-                                                    <input id="gmap_where" type="text" name="gmap_where" class="big_text sHotels fl focusInput focusClear no_cpu typeahead beforeOnLoad" tabindex="1" autocomplete="off" onfocus="ta.trackEventOnPage('PYPT_search', 'hotel', 'focus', 0, false);" placeholder="e.g Oxford Street, London, UK">
+                                                    <input id="gmap_where" type="text" name="gmap_where" class="big_text sHotels fl focusInput focusClear no_cpu typeahead beforeOnLoad" tabindex="1" autocomplete="off" onFocus="geolocate()" placeholder="e.g Oxford Street, London, UK">
 
                                                     <!-- geolocation begin -->
+<!--
                                                     <script src="js/modernizr-2.8.3.js"></script>
                                                     <script src="js/geolocation.js"></script>
+-->
                                                     <!-- geolocation end -->
                                                     <!--    <input id="gmap_keyword" type="text" name="gmap_keyword" class="big_text sHotels fl focusInput focusClear no_cpu typeahead beforeOnLoad" tabindex="2" autocomplete="off" onfocus="ta.trackEventOnPage('PYPT_search', 'hotel', 'focus', 0, false);" value="I'm looking for...">-->
                                                     <input id="gmap_keyword" type="text" name="gmap_keyword" class="big_text sHotels fl focusInput focusClear no_cpu typeahead beforeOnLoad" tabindex="2" autocomplete="off" onfocus="ta.trackEventOnPage('PYPT_search', 'hotel', 'focus', 0, false);" placeholder="socks">
@@ -192,7 +202,7 @@ Review a shop </span>
             </div>
         </div>
 
-        <div id="gmap_canvas"></div>
+<!--        <div id="gmap_canvas"></div>-->
         <!--/ HOMEPAGE-->
 
     </div>
