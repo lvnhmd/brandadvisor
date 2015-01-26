@@ -1,0 +1,202 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://opengraphprotocol.org/schema/">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Shop and Brand Reviews - BrandAdvisor</title>
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="cache-control" content="no-cache,must-revalidate" />
+    <!-- a value of zero is supposed to be equal to "immediately" -->
+    <meta http-equiv="expires" content="0" />
+    <!-- a value of zero is supposed to be equal to "immediately" -->
+    <meta property="og:image" content="assets/icon.gif" height="150px" width="150px" />
+    <meta name="keywords" content="shop, brand, review, reviews, popular, discount, map, maps, advice" />
+    <meta name="description" content="BrandAdvisor - Unbiased brand reviews and shopping advice" />
+    <link href="css/index.css" rel="stylesheet" type="text/css" />
+    <link href="css/main.css" rel="stylesheet" type="text/css" />
+    <link href="css/homepage.css" rel="stylesheet" type="text/css" />
+
+
+    <!-- GooglePlacesAPIExample begin -->
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false"></script>
+    <script src="js/script.js"></script>
+    <!-- GooglePlacesAPIExample end -->
+</head>
+
+<body class="ltr globalNav2011_reset">
+    <div id="PAGE">
+        <div id="HEAD">
+            <div class="masthead">
+                <div class="container">
+                    <div class="brandArea">
+                        <span class="topLogo">
+                            <!--itemscope and itemtype explained @ http://schema.org/docs/gs.html-->
+                            <div id="mastheadImg">
+                                <a href="index.html">
+                                    <img src="assets/logo_1287553_web_xs.jpg" width="119" height="35" alt="Reviews of Brands and Shops"/>
+                                </a>
+                            </div>
+                        </span>
+                    </div>
+
+                    <div id="USER_PREFS">
+                        <ul>
+                            <li id="register" onclick=""><span class="link">JOIN</span>
+                            </li>
+                            <li class="login" onclick=""><span class="link">LOG IN</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- end div container-->
+
+                <div class="tabsBar">
+                    <ul class="tabs" onclick="">
+                        <li class="tabItem altItem dropDown warLink">
+                            <span class="tabLink arwLink">
+                                <span class="arrow_text">
+                                    Write a Review <div id="WAR_NOTIFICATION_FLAG" class="lsJewelCounter">1+</div>
+                                </span>
+                            <img class="arrow_dropdown_wht sprite-arrow_dropdown_wht_refresh" src="http://c1.tacdn.com/img2/x.gif" alt="" width="9" height="7">
+                            </span>
+                            <div class="subNav">
+                                <div id="WAR_TO_DO_LIST">
+                                    <div id="WAR_ANOTHER_POI" class="warAnotherPOI">
+                                        <div class="warLoc subItem" onclick="ta.setEvtCookie('WAR', 'WAR_PROJECT_GLOBAL_NAV_DROP_DOWN', 'PICK_ANOTHER_POI', '', '/UserReviewRedesign');location.href='https://www.tripadvisor.co.uk/UserReview-ehttp%3A__2F____2F__www__2E__tripadvisor__2E__co__2E__uk__2F__'">
+                                            <div class="warLocImg">
+                                                <div class="nophoto thumbNail">
+                                                    <img id='lazyload_425054379_0' class='lodge' />
+                                                </div>
+                                            </div>
+                                            <div class="warLocDetail">
+                                                <span>
+Review a shop </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="WAR_TODO_LOADING">
+                                        <img src="http://c1.tacdn.com/img2/spinner.gif" />
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--end div HEAD-->
+
+        <div id="SECONDARY_NAV_BAR" class="secondaryNavBar">
+            <div class="crumbs dark">
+                <div class="searchSpacer searchSpacerWide"></div>
+                <div class="globalSearch">
+                    <div class="fader"></div>
+                    <div class="navSrch  no_cpu ">
+                        <form method="get" action="/Search" onsubmit="return ta.call('ta.common.search.recordAndValidate', event)" id="global_nav_search_form">
+                            <span id="MAIN_SEARCH_CONTAINER" class="mainSearchContainer">
+<input id="mainSearch" type="text" name="q" class="text searchInputWide  focusClear" autocomplete="off" onBlur="if(this.value.trim() == ''){
+                            this.addClass('focusClear');
+                         }" onfocus="if (ta && ta.common) {
+                 this.removeClass('focusClear');
+                                                       ta.trackEventOnPage('TopNav_search', 'focus', '');
+
+
+
+                                        ta.call('ta.common.header.createTypeAhead', event, this, '', {showHistory:true, integrateHistory:true,
+                                                                                                 focusAction:'history', doExpansion: false,
+                                                                                                 minChars:3, defaultValue:'Search for it'});
+                                                     }" onkeydown="if (ta && (event.keyCode || event.which) === 13){ta.setEvtCookie('TopNav_Search', 'Action', 'Hit_Enter_toSRP', 0, '/Search');}" value="Search for it">
+</span>
+                            <input class="sprite-search_mag_glass" type="image" src="http://c1.tacdn.com/img2/x.gif" onclick=" if (event.clientY) { ta.id('global_nav_search_form').elements['pid'].value=3825; };ta.setEvtCookie('TopNav_Search', 'Action', 'Selected_magnifying_glass_toSRP', 0, '/Search');" name="sub-search">
+                            <input id="TYPEAHEAD_GEO_ID" type="hidden" name="geo" value="">
+                            <input type="hidden" name="pid" value="3826">
+                            <input type="hidden" name="returnTo" value="http%3A__2F____2F__www__2E__tripadvisor__2E__co__2E__uk__2F__">
+                        </form>
+                    </div>
+                </div>
+                <ul class="breadcrumbs" id="BREADCRUMBS">
+                </ul>
+            </div>
+            <div class="easyClear"></div>
+        </div>
+
+        <div class="homePageHeaderBox">
+            <div class="headerScrollLimiter">
+                <div id="mainImageHeader" class="heroImageWidth heroImageHeight" onclick="ta.pages.home.trackHeroPhoto(event)">
+                    <div id="PPT" class="ppt_container">
+                        <div class="ppt_innerContent">
+                            <div class="ppt_meta_wrapper">
+                                <div class="ppt_meta">
+                                    <h1 class="ppt_header" id="ppt_header"><!--shop till you drop-->
+                                    </h1>
+                                    <div class="ppt_forms">
+                                        <div class="ppt_sections">
+                                            <div id="ptptHotels" class="ptptContent active loaded">
+                                                <div class="wrap">
+                                                    <!--    <input id="gmap_where" type="text" name="gmap_where" class="big_text sHotels fl focusInput focusClear no_cpu typeahead beforeOnLoad" tabindex="1" autocomplete="off" onfocus="ta.trackEventOnPage('PYPT_search', 'hotel', 'focus', 0, false);" value="my location is...">-->
+                                                    <input id="gmap_where" type="text" name="gmap_where" class="big_text sHotels fl focusInput focusClear no_cpu typeahead beforeOnLoad" tabindex="1" autocomplete="off" onfocus="ta.trackEventOnPage('PYPT_search', 'hotel', 'focus', 0, false);" placeholder="e.g Oxford Street, London, UK">
+
+                                                    <!-- geolocation begin -->
+                                                    <script src="js/modernizr-2.8.3.js"></script>
+                                                    <script src="js/geolocation.js"></script>
+                                                    <!-- geolocation end -->
+                                                    <!--    <input id="gmap_keyword" type="text" name="gmap_keyword" class="big_text sHotels fl focusInput focusClear no_cpu typeahead beforeOnLoad" tabindex="2" autocomplete="off" onfocus="ta.trackEventOnPage('PYPT_search', 'hotel', 'focus', 0, false);" value="I'm looking for...">-->
+                                                    <input id="gmap_keyword" type="text" name="gmap_keyword" class="big_text sHotels fl focusInput focusClear no_cpu typeahead beforeOnLoad" tabindex="2" autocomplete="off" onfocus="ta.trackEventOnPage('PYPT_search', 'hotel', 'focus', 0, false);" placeholder="socks">
+                                                    <input type="hidden" id="lat" name="lat" value="51.5147643" />
+                                                    <input type="hidden" id="lng" name="lng" value="-0.137734" />
+                                                    <input id="SUBMIT_HOTELS" class="submit sprite-submit_hotels fr" tabindex="4" type="image" src="http://c1.tacdn.com/img2/x.gif" onclick="findPlaces(); return false;" alt="Find hotels">
+                                                    <!--
+                                                    <button type="submit" id="SUBMIT_HOTEL" class="submit sprite-submit_hotels fr" onclick="ta.trackEventOnPage('Meta_Homepage', 'Submit', 'Hotels', 0, false);" onmousedown="ta.store('ta.pages.home.find.clicked', true);" alt="Find hotels">
+</button>
+-->
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="display:none">
+                            </div>
+                            <!--                            here-->
+                            <a class="headerQuote" href="http://www.selfridges.com/" onclick="setPID(0); ta.pages.home.trackFeaturedQuote(event);">
+                                <div class="circularAvWrap">
+                                    <img class="headerQuoteAvatar circularAvatar" src="http://c1.tacdn.com/img2/x.gif" width="64" height="64">
+                                </div>
+                                <div class="headerQuoteContent">
+                                    <div class="headerQuoteTitle">&ldquo;I love Selfridges!&rdquo;</div>
+                                    <div class="headerQuoteRating wrap">
+                                        <img class="hardCoded5Bubble fl" src="http://c1.tacdn.com/img2/x.gif" alt="-1">
+                                        <div class="headerQuoteText headerBubbleText fl">Review by Ella Bella</div>
+                                    </div>
+                                    <div class="headerQuoteText">
+                                        See all 30,901 reviews of <span class='quoteLoc'>Selfridges</span> &nbsp&rsaquo;
+                                    </div>
+                                </div>
+                            </a>
+                            <script>
+                                (function () {
+                                    var head = document.getElementById("ppt_header");
+                                    if (head) {
+//                                        head.innerHTML = "shop till you drop";
+                                    }
+                                })()
+                            </script>
+                        </div>
+                        <div class="promo">
+                            <img class="promo_featured_image" src="http://c1.tacdn.com/img2/x.gif" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="gmap_canvas"></div>
+        <!--/ HOMEPAGE-->
+
+    </div>
+
+</body>
+
+</html>

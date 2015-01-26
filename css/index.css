@@ -1,0 +1,60 @@
+.homePageHeaderBox .heroImageWidth {
+    width: 1482px;
+    position: relative;
+    /* This kind of margin doesn't handle all resize conditions: margin:0 auto; */
+}
+.ltr .homePageHeaderBox .heroImageWidth {
+    left: 50%;
+    margin-left: -741px;
+}
+.rtl .homePageHeaderBox .heroImageWidth {
+    right: 50%;
+    margin-right: -741px;
+}
+.homePageHeaderBox .heroImageHeight {
+    height: 500px;
+}
+.homePageHeaderBox .headerScrollLimiter {
+    max-width: 1482px;
+}
+.homePageHeaderBox .promo_featured_image {
+    height: 500px;
+    width: 1482px;
+/*    background: url("../assets/selfridgesmain_xl.jpg");*/
+}
+.homePageHeaderBox .ppt_innerContent {
+    height: 500px;
+}
+.homePageHeaderBox .ppt_meta .ppt_header {
+    color: #FFFFFF;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.65);
+}
+.homePageHeaderBox .headerQuote {
+    position: absolute;
+    top: 55px;
+    left: 240px;
+    cursor: pointer;
+}
+.homePageHeaderBox .headerQuote:hover .quoteLoc {
+    text-decoration: underline;
+}
+.homePageHeaderBox .headerQuoteTitle {
+    color: #3e246d;
+}
+.homePageHeaderBox .headerQuoteText {
+    color: #3e246d;
+}
+.homePageHeaderBox .headerQuoteAvatar {
+    background: url("../assets/avatar.gif") no-repeat;
+}
+.homePageHeaderBox .headerCarousel .carouselItem {
+    width: 243px;
+    height: 138px;
+}
+.homePageHeaderBox .headerCarouselPlaceholder {
+    height: 138px;
+}
+.homePageHeaderBox .headerCarouselPlaceholder,
+.homePageHeaderBox .navArrowBox {
+    display: block;
+}
