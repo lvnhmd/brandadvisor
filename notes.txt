@@ -2,7 +2,7 @@
 	.	find place’s name by coordinates and pre-populate gmap_where
 2.	default is Oxford Street, London, UK 
 3.	if user starts typing - autocomplete 
-4.	how can I autocomplete the gamp_keyword
+4.	how can I autocomplete the gmap_keyword
 
 
 oxford street, london

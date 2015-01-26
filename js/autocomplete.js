@@ -17,6 +17,8 @@ function initialize() {
   autocomplete = new google.maps.places.Autocomplete(
       /** @type {HTMLInputElement} */(document.getElementById('gmap_where')),
       { types: ['geocode'] });
+
+    alert(autocomplete);
   // When the user selects an address from the dropdown,
   // populate the address fields in the form.
 //  google.maps.event.addListener(autocomplete, 'place_changed', function() {
