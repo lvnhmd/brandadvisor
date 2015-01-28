@@ -22,9 +22,9 @@ function initialize() {
 
     // When the user selects an address from the dropdown,
     // populate the address fields in the form.
-    google.maps.event.addListener(autocomplete, 'place_changed', function () {
-        debug();
-    });
+//    google.maps.event.addListener(autocomplete, 'place_changed', function () {
+//        debug();
+//    });
 
     placesList = document.getElementById('places');
 }
@@ -100,11 +100,10 @@ function findPlaces() {
 //http://stackoverflow.com/questions/14343965/google-places-library-without-map
 
 function callback(results, status, pagination) {
+    alert("STATUS|" + status + "|");
     if (status != google.maps.places.PlacesServiceStatus.OK) {
-        alert("NOT OK");
         return;
     } else {
-        alert("ALL GOOD");
         for (var i = 0, place; place = results[i]; i++) {
             placesList.innerHTML += '<li>' + place.name + '</li>';
         }
