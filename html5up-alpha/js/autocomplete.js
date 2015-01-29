@@ -12,19 +12,20 @@ var placeSearchService, autocomplete, placesList;
 //};
 
 function initialize() {
+    alert("Hi Elvin");
     // Create the autocomplete object, restricting the search
     // to geographical location types.
     autocomplete = new google.maps.places.Autocomplete(
         /** @type {HTMLInputElement} */
-        (document.getElementById('gmap_where')), {
+        (document.getElementById('ba_where')), {
             types: ['geocode']
         });
 
     // When the user selects an address from the dropdown,
     // populate the address fields in the form.
-//    google.maps.event.addListener(autocomplete, 'place_changed', function () {
-//        debug();
-//    });
+    google.maps.event.addListener(autocomplete, 'place_changed', function () {
+        debug();
+    });
 
     placesList = document.getElementById('places');
 }
@@ -57,7 +58,7 @@ function debug() {
 // Bias the autocomplete object to the user's geographical location,
 // as supplied by the browser's 'navigator.geolocation' object.
 function geolocate() {
-    alert("hmm, interesting...");
+    alert("Oh, hi again :)");
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function (position) {
             var geolocation = new google.maps.LatLng(
@@ -76,7 +77,7 @@ function findPlaces() {
     // prepare variables (filter)
     var type = "store"; //document.getElementById('gmap_type').value;
     var radius = 5000; //document.getElementById('gmap_radius').value;
-    var keyword = document.getElementById('gmap_keyword').value; //I'm looking for...
+    var keyword = document.getElementById('ba_what').value; //I'm looking for...
     var lat = autocomplete.getPlace().geometry.location.lat();
     var lng = autocomplete.getPlace().geometry.location.lng();
     var cur_location = new google.maps.LatLng(lat, lng);

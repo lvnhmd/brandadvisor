@@ -17,7 +17,11 @@
 		<script src="js/skel.min.js"></script>
 		<script src="js/skel-layers.min.js"></script>
 		<script src="js/init.js"></script>
-		<noscript>
+		<!-- Google Autocomplete begin -->
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&libraries=places"></script>
+        <script src="js/autocomplete.js"></script>
+        <!-- Google Autocomplete end -->
+        <noscript>
 			<link rel="stylesheet" href="css/skel.css" />
 			<link rel="stylesheet" href="css/style.css" />
 			<link rel="stylesheet" href="css/style-wide.css" />
@@ -58,16 +62,34 @@
 			<section id="banner">
 				<h2>Alpha</h2>
 				<p>Another fine responsive site template freebie by HTML5 UP.</p>
+<!--
 				<ul class="actions">
 					<li><a href="#" class="button special">Sign Up</a></li>
 					<li><a href="#" class="button">Learn More</a></li>
 				</ul>
+-->
+<!--                <form method="post" action="#">-->
+<!--                                                                        <input id="gmap_where" type="text" name="gmap_where" class="big_text sHotels fl focusInput focusClear no_cpu typeahead beforeOnLoad" tabindex="1" autocomplete="off" onFocus="geolocate()" placeholder="e.g Oxford Street, London, UK">-->
+
+<!--<input id="gmap_keyword" type="text" name="gmap_keyword" class="big_text sHotels fl focusInput focusClear no_cpu typeahead beforeOnLoad" tabindex="2" autocomplete="off" onfocus="ta.trackEventOnPage('PYPT_search', 'hotel', 'focus', 0, false);" placeholder="socks">                    -->
+                    <div class="row %25" style="margin-left: auto; margin-right: auto; width: 80%;">
+                        <div class="5u">
+						      <input type="text" name="ba_where" id="ba_what" value="" placeholder="e.g Oxford Street, London, UK" onfocus="geolocate()"/>
+				        </div>
+				        <div class="5u">
+						      <input type="text" name="ba_what" id="ba_what" value="" placeholder="e.g socks" />
+						</div>
+                        <div class="2u">
+                            <input type="button" value="Search" onclick="findPlaces(); return false;"/>
+                        </div>
+                    </div>
+<!--                </form>-->
 			</section>
 
 		<!-- Main -->
-			<section id="main" class="container">
+<!--			<section id="main" class="container">
 
-<!--
+
 				<section class="box special">
 					<header class="major">
 						<h2>Introducing the ultimate mobile app
@@ -136,9 +158,9 @@
 
 					</div>
 				</div>
--->
 
-			</section>
+
+			</section> -->
 
 		<!-- CTA -->
 <!--
