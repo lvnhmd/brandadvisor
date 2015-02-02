@@ -13,5 +13,6 @@
 /* Banner */
 
 	#banner {
-		padding: 10em 0 18em 0;
+        /*		top right bottom left*/
+		padding: 26em 0 4em 0;
 	}
