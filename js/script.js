@@ -108,15 +108,27 @@ function callback(results, status, pagination) {
 //												<td>Ante turpis integer aliquet porttitor.</td>
 //												<td>29.99</td>
 //											</tr>
-        var  placesListInnerHTML='<table><tbody>';
+        var detailsRequest ={
+            placeId: ''
+        };
+        var placesListInnerHTML='<table><tbody>';
         for (var i = 0, place; place = results[i]; i++) {
 
             placesListInnerHTML += '<tr>';
-            placesListInnerHTML += '<td>' + JSON.stringify(place); + '</td>';
-//            placesListInnerHTML += '<td>' + place.name + '</td>';
-//            placesListInnerHTML += '<td>' + place.website + '</td>';
-//            placesListInnerHTML += '<td>' + place.rating + '</td>';
-            placesListInnerHTML += '</tr>';
+//            placesListInnerHTML += '<td>' + JSON.stringify(place); + '</td>';
+////            placesListInnerHTML += '<td>' + place.name + '</td>';
+////            placesListInnerHTML += '<td>' + place.website + '</td>';
+////            placesListInnerHTML += '<td>' + place.rating + '</td>';
+//            placesListInnerHTML += '</tr>';
+
+            detailsRequest.placeId=results[i].id;
+
+            placeSearchService.getDetails(detailsRequest, function (placeDetails, status1) {
+             if (status1 == google.maps.places.PlacesServiceStatus.OK) {
+                 placesListInnerHTML += '<td>' + JSON.stringify(placeDetails); + '</td>';
+             }
+            });
+
         }
         placesListInnerHTML+='</table></tbody>';
 //        alert(placesListInnerHTML);
