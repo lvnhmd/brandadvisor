@@ -16,15 +16,15 @@ function initialize() {
     // to geographical location types.
     autocomplete = new google.maps.places.Autocomplete(
         /** @type {HTMLInputElement} */
-        (document.getElementById('gmap_where')), {
+        (document.getElementById('ba_where')), {
             types: ['geocode']
         });
 
     // When the user selects an address from the dropdown,
     // populate the address fields in the form.
-//    google.maps.event.addListener(autocomplete, 'place_changed', function () {
-//        debug();
-//    });
+    google.maps.event.addListener(autocomplete, 'place_changed', function () {
+        debug();
+    });
 
     placesList = document.getElementById('places');
 }
@@ -34,9 +34,9 @@ function debug() {
     var place = autocomplete.getPlace();
 
 
-    alert(autocomplete.getPlace().geometry.location.lat());
-    alert(autocomplete.getPlace().geometry.location.lng());
-    alert(autocomplete.getPlace().name);
+//    alert(autocomplete.getPlace().geometry.location.lat());
+//    alert(autocomplete.getPlace().geometry.location.lng());
+//    alert(autocomplete.getPlace().name);
 
     //  for (var component in componentForm) {
     //    document.getElementById(component).value = '';
@@ -57,7 +57,6 @@ function debug() {
 // Bias the autocomplete object to the user's geographical location,
 // as supplied by the browser's 'navigator.geolocation' object.
 function geolocate() {
-    alert("hmm, interesting...");
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function (position) {
             var geolocation = new google.maps.LatLng(
@@ -72,11 +71,10 @@ function geolocate() {
 }
 
 function findPlaces() {
-    //	alert("hello findPlaces");
     // prepare variables (filter)
     var type = "store"; //document.getElementById('gmap_type').value;
     var radius = 5000; //document.getElementById('gmap_radius').value;
-    var keyword = document.getElementById('gmap_keyword').value; //I'm looking for...
+    var keyword = document.getElementById('ba_what').value; //I'm looking for...
     var lat = autocomplete.getPlace().geometry.location.lat();
     var lng = autocomplete.getPlace().geometry.location.lng();
     var cur_location = new google.maps.LatLng(lat, lng);
@@ -91,7 +89,7 @@ function findPlaces() {
     if (keyword) {
         request.keyword = [keyword];
     }
-    alert('request : ' + request.keyword + ' | ' + request.location + ' | ' + request.radius + ' | ' + request.types);
+//    alert('request : ' + request.keyword + ' | ' + request.location + ' | ' + request.radius + ' | ' + request.types);
     // send request
     placeSearchService = new google.maps.places.PlacesService(placesList);
     placeSearchService.search(request, callback);
@@ -101,13 +99,28 @@ function findPlaces() {
 //http://stackoverflow.com/questions/14343965/google-places-library-without-map
 
 function callback(results, status, pagination) {
-    alert("STATUS|" + status + "|");
+//    alert("STATUS|" + status + "|");
     if (status != google.maps.places.PlacesServiceStatus.OK) {
         return;
     } else {
+//        <tr>
+//												<td>Something</td>
+//												<td>Ante turpis integer aliquet porttitor.</td>
+//												<td>29.99</td>
+//											</tr>
+        var  placesListInnerHTML='<table><tbody>';
         for (var i = 0, place; place = results[i]; i++) {
-            placesList.innerHTML += '<li>' + place.name + '</li>';
+
+            placesListInnerHTML += '<tr>';
+            placesListInnerHTML += '<td>' + JSON.stringify(place); + '</td>';
+//            placesListInnerHTML += '<td>' + place.name + '</td>';
+//            placesListInnerHTML += '<td>' + place.website + '</td>';
+//            placesListInnerHTML += '<td>' + place.rating + '</td>';
+            placesListInnerHTML += '</tr>';
         }
+        placesListInnerHTML+='</table></tbody>';
+//        alert(placesListInnerHTML);
+        placesList.innerHTML=placesListInnerHTML;
 
         //    createMarkers(results);
         //
