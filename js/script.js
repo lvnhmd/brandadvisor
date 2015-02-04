@@ -1,7 +1,7 @@
 // This example displays an address form, using the autocomplete feature
 // of the Google Places API to help users fill in the information.
 //https://developers.google.com/maps/documentation/javascript/examples/places-autocomplete-addressform
-var placeSearchService, autocomplete, placesList;
+var placeService, autocomplete, placesList;
 //var componentForm = {
 //  street_number: 'short_name',
 //  route: 'long_name',
@@ -12,7 +12,7 @@ var placeSearchService, autocomplete, placesList;
 //};
 
 function initialize() {
-    console.info("initialize");
+//    console.info("initialize");
     // Create the autocomplete object, restricting the search
     // to geographical location types.
     autocomplete = new google.maps.places.Autocomplete(
@@ -23,37 +23,11 @@ function initialize() {
 
     // When the user selects an address from the dropdown,
     // populate the address fields in the form.
-    google.maps.event.addListener(autocomplete, 'place_changed', function () {
-        console.log(autocomplete.getPlace());
-        //        debug();
-    });
+//    google.maps.event.addListener(autocomplete, 'place_changed', function () {
+//        console.log(autocomplete.getPlace());
+//    });
 
     placesList = document.getElementById('places');
-}
-
-function debug() {
-    // Get the place details from the autocomplete object.
-    var place = autocomplete.getPlace();
-
-
-//    alert(autocomplete.getPlace().geometry.location.lat());
-//    alert(autocomplete.getPlace().geometry.location.lng());
-//    alert(autocomplete.getPlace().name);
-
-    //  for (var component in componentForm) {
-    //    document.getElementById(component).value = '';
-    //    document.getElementById(component).disabled = false;
-    //  }
-    //
-    //  // Get each component of the address from the place details
-    //  // and fill the corresponding field on the form.
-    //  for (var i = 0; i < place.address_components.length; i++) {
-    //    var addressType = place.address_components[i].types[0];
-    //    if (componentForm[addressType]) {
-    //      var val = place.address_components[i][componentForm[addressType]];
-    //      document.getElementById(addressType).value = val;
-    //    }
-    //  }
 }
 
 // Bias the autocomplete object to the user's geographical location,
@@ -91,70 +65,50 @@ function findPlaces() {
     if (keyword) {
         request.keyword = [keyword];
     }
-//    alert('request : ' + request.keyword + ' | ' + request.location + ' | ' + request.radius + ' | ' + request.types);
-    // send request
-    placeSearchService = new google.maps.places.PlacesService(placesList);
-    placeSearchService.search(request, callback);
+
+    placeService = new google.maps.places.PlacesService(placesList);
+    placeService.search(request, callback);
 }
 
 //https://developers.google.com/maps/documentation/javascript/examples/place-search-pagination
 //http://stackoverflow.com/questions/14343965/google-places-library-without-map
 
 function callback(results, status, pagination) {
-//    alert("STATUS|" + status + "|");
+
     if (status != google.maps.places.PlacesServiceStatus.OK) {
         return;
     } else {
-//        <tr>
-//												<td>Something</td>
-//												<td>Ante turpis integer aliquet porttitor.</td>
-//												<td>29.99</td>
-//											</tr>
-        var detailsRequest ={
-            placeId: ''
-        };
-        var placesListInnerHTML='<table><tbody>';
+
+//        var placesListInnerHTML='<table><tbody>';
+        var placesListInnerHTML='<ul class=\"alt\">';
         for (var i = 0, place; place = results[i]; i++) {
-
-            placesListInnerHTML += '<tr>';
-//            placesListInnerHTML += '<td>' + JSON.stringify(place); + '</td>';
-////            placesListInnerHTML += '<td>' + place.name + '</td>';
-////            placesListInnerHTML += '<td>' + place.website + '</td>';
-////            placesListInnerHTML += '<td>' + place.rating + '</td>';
-//            placesListInnerHTML += '</tr>';
-            console.log(results[i].id);
-            detailsRequest.placeId=results[i].place_id;
-            console.log(detailsRequest);
-
-
-            placeSearchService.getDetails(detailsRequest, function (placeDetails, status1) {
-             if (status1 == google.maps.places.PlacesServiceStatus.OK) {
-                 console.log('TA DAH');
-                 placesListInnerHTML += '<td>' + JSON.stringify(placeDetails); + '</td>';
-             }
-            });
-
-            placesListInnerHTML += '</tr>';
-
+//            placesListInnerHTML += '<tr id=\"tr_' + place.place_id + '\"></tr>';
+            placesListInnerHTML += '<li id=\"tr_' + place.place_id + '\"></li>';
         }
-        placesListInnerHTML+='</table></tbody>';
-        console.info(placesListInnerHTML);
-//        alert(placesListInnerHTML);
+//        placesListInnerHTML+='</table></tbody>';
+        placesListInnerHTML+='</ul>';
         placesList.innerHTML=placesListInnerHTML;
 
-        //    createMarkers(results);
-        //
-        //    if (pagination.hasNextPage) {
-        //      var moreButton = document.getElementById('more');
-        //
-        //      moreButton.disabled = false;
-        //
-        //      google.maps.event.addDomListenerOnce(moreButton, 'click',
-        //          function() {
-        //        moreButton.disabled = true;
-        //        pagination.nextPage();
-        //      });
-        //    }
+        for (var i = 0, place; place = results[i]; i++) {
+
+//             document.getElementById('tr_' + place.place_id).innerHTML +=
+//                '<td><input type=\"checkbox\" id=\"checkbox_' + place.place_id + '\"></td>';
+
+            document.getElementById('tr_' + place.place_id).innerHTML +=
+                '<input type=\"checkbox\" id=\"checkbox_' + place.place_id + '\">';
+            document.getElementById('tr_' + place.place_id).innerHTML += place.name;
+
+//            var photos = place.photos;
+//            if (photos) {
+//                document.getElementById('tr_' + place.place_id).innerHTML +=
+////                '<td><span class=\"image left\"><img src=\"' + photos[0].getUrl({
+//                    '<span class=\"image left\"><img src=\"' + photos[0].getUrl({
+//                    'maxWidth': 120,
+//                    'maxHeight': 160
+//                }) + '\" alt=\"\" /></span>';
+//            }
+        }
+        console.log(placesList.innerHTML);
     }
 }
 
