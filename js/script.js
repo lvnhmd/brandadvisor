@@ -12,6 +12,7 @@ var placeSearchService, autocomplete, placesList;
 //};
 
 function initialize() {
+    console.info("initialize");
     // Create the autocomplete object, restricting the search
     // to geographical location types.
     autocomplete = new google.maps.places.Autocomplete(
@@ -23,7 +24,8 @@ function initialize() {
     // When the user selects an address from the dropdown,
     // populate the address fields in the form.
     google.maps.event.addListener(autocomplete, 'place_changed', function () {
-        debug();
+        console.log(autocomplete.getPlace());
+        //        debug();
     });
 
     placesList = document.getElementById('places');
@@ -120,17 +122,23 @@ function callback(results, status, pagination) {
 ////            placesListInnerHTML += '<td>' + place.website + '</td>';
 ////            placesListInnerHTML += '<td>' + place.rating + '</td>';
 //            placesListInnerHTML += '</tr>';
+            console.log(results[i].id);
+            detailsRequest.placeId=results[i].place_id;
+            console.log(detailsRequest);
 
-            detailsRequest.placeId=results[i].id;
 
             placeSearchService.getDetails(detailsRequest, function (placeDetails, status1) {
              if (status1 == google.maps.places.PlacesServiceStatus.OK) {
+                 console.log('TA DAH');
                  placesListInnerHTML += '<td>' + JSON.stringify(placeDetails); + '</td>';
              }
             });
 
+            placesListInnerHTML += '</tr>';
+
         }
         placesListInnerHTML+='</table></tbody>';
+        console.info(placesListInnerHTML);
 //        alert(placesListInnerHTML);
         placesList.innerHTML=placesListInnerHTML;
 
