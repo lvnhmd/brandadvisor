@@ -77,7 +77,7 @@ function callback(results, status, pagination) {
         for (var i = 0, place; place = results[i]; i++) {
             liInnerHtml='';
 
-            liInnerHtml+='<li>';
+            liInnerHtml+='<li style=\"border: 5px solid black\">';
 
             var photos = place.photos;
             if (photos) {
