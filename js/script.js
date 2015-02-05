@@ -1,15 +1,4 @@
-// This example displays an address form, using the autocomplete feature
-// of the Google Places API to help users fill in the information.
-//https://developers.google.com/maps/documentation/javascript/examples/places-autocomplete-addressform
 var placeService, autocomplete, placesList;
-//var componentForm = {
-//  street_number: 'short_name',
-//  route: 'long_name',
-//  locality: 'long_name',
-//  administrative_area_level_1: 'short_name',
-//  country: 'long_name',
-//  postal_code: 'short_name'
-//};
 
 function initialize() {
 //    console.info("initialize");
@@ -21,8 +10,6 @@ function initialize() {
             types: ['geocode']
         });
 
-    // When the user selects an address from the dropdown,
-    // populate the address fields in the form.
 //    google.maps.event.addListener(autocomplete, 'place_changed', function () {
 //        console.log(autocomplete.getPlace());
 //    });
@@ -48,8 +35,8 @@ function geolocate() {
 
 function findPlaces() {
     // prepare variables (filter)
-    var type = "store"; //document.getElementById('gmap_type').value;
-    var radius = 5000; //document.getElementById('gmap_radius').value;
+    var type = "store";
+    var radius = 5000;
     var keyword = document.getElementById('ba_what').value; //I'm looking for...
     var lat = autocomplete.getPlace().geometry.location.lat();
     var lng = autocomplete.getPlace().geometry.location.lng();
@@ -79,35 +66,38 @@ function callback(results, status, pagination) {
         return;
     } else {
 
-//        var placesListInnerHTML='<table><tbody>';
-        var placesListInnerHTML='<ul class=\"alt\">';
+        var placesListInnerHTML= '';
         for (var i = 0, place; place = results[i]; i++) {
-//            placesListInnerHTML += '<tr id=\"tr_' + place.place_id + '\"></tr>';
             placesListInnerHTML += '<li id=\"tr_' + place.place_id + '\"></li>';
         }
-//        placesListInnerHTML+='</table></tbody>';
-        placesListInnerHTML+='</ul>';
+
         placesList.innerHTML=placesListInnerHTML;
 
+        var liInnerHtml;
         for (var i = 0, place; place = results[i]; i++) {
+            liInnerHtml='';
 
-//             document.getElementById('tr_' + place.place_id).innerHTML +=
-//                '<td><input type=\"checkbox\" id=\"checkbox_' + place.place_id + '\"></td>';
+            liInnerHtml+='<li>';
 
-            document.getElementById('tr_' + place.place_id).innerHTML +=
-                '<input type=\"checkbox\" id=\"checkbox_' + place.place_id + '\">';
-            document.getElementById('tr_' + place.place_id).innerHTML += place.name;
+            var photos = place.photos;
+            if (photos) {
+                liInnerHtml+=
+                    '<div id="imgleft"><img src=\"' + photos[0].getUrl({
+                    'maxWidth': 178,
+                    'maxHeight': 128
+                }) + '\" alt=\"\" class=\"left\" /></div>';
+            }else {
+                 liInnerHtml+=
+                    '<div id="imgleft"><img src=\"\" alt=\"\" class=\"left\" /></div>';
+            }
 
-//            var photos = place.photos;
-//            if (photos) {
-//                document.getElementById('tr_' + place.place_id).innerHTML +=
-////                '<td><span class=\"image left\"><img src=\"' + photos[0].getUrl({
-//                    '<span class=\"image left\"><img src=\"' + photos[0].getUrl({
-//                    'maxWidth': 120,
-//                    'maxHeight': 160
-//                }) + '\" alt=\"\" /></span>';
-//            }
+            liInnerHtml+='<h3>' + place.name + '</h3>';
+            liInnerHtml+='<p>' + place.name + '<p>';
+            liInnerHtml+='</li>';
+
+            document.getElementById('tr_' + place.place_id).innerHTML = liInnerHtml;
         }
+
         console.log(placesList.innerHTML);
     }
 }

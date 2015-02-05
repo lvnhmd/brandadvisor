@@ -632,7 +632,7 @@
 		}
 
 	ul {
-		list-style: disc;
+/*		list-style: disc;*/
 		margin: 0 0 2em 0;
 		padding-left: 1em;
 	}
@@ -1288,7 +1288,7 @@
 /* Main */
 
 	#main {
-		padding: 4em 0;
+		padding: 6em 0;
 	}
 
 		#main > header {
@@ -1427,3 +1427,31 @@
 		#cta .formerize-placeholder {
 			color: rgba(255, 255, 255, 0.75) !important;
 		}
+
+    #imgleft {
+        width: 190px;
+        height: 140px;
+        overflow: hidden;
+        border: 2px solid black;
+        display: inline;
+    }
+
+
+    #imgleft img.left {
+		float: left;
+		margin: 2px 1.25em 0 0;
+        max-width: 178px;
+        max-height: 128px;
+
+	}
+
+    ul.big-image-list {
+	}
+
+		ul.big-image-list li {
+			overflow: hidden;
+			margin-bottom: 2em;
+		}
+    section.middle-content {
+		padding: 160px 30px 0 30px;
+	}
