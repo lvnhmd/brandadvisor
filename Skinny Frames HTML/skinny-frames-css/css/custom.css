@@ -1,7 +1,13 @@
+/*
+.field_text,
+.field_select
+*/
 #mainsearchfield {
+/*
     float:left;
     margin-right: 2%;
     margin-bottom: 14px;
-    width: 38%;
-    position: relative;
+*/
+    width: 43%;
+/*    position: relative;*/
 }
