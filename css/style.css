@@ -1451,6 +1451,7 @@
 		ul.big-image-list li {
 			overflow: hidden;
 			margin-bottom: 2em;
+            border: 2px solid black;
 		}
     section.middle-content {
 		padding: 160px 30px 0 30px;

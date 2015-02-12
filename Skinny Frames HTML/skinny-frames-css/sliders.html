@@ -1,0 +1,568 @@
+<!doctype html>
+<!--[if lt IE 7 ]><html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]><html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta name="author" content="ThemeFuse">
+<meta name="keywords" content="">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Skinny Frames | Sliders and Footers</title>
+
+<!-- main JS libs  -->
+<script src="js/libs/modernizr.min.js"></script>
+<script src="js/libs/jquery-1.10.2.min.js"></script>
+<script src="js/libs/bootstrap.min.js"></script>
+
+<!-- Style CSS-->
+<link href="css/bootstrap.css" media="screen" rel="stylesheet">
+<link href="style.css" media="screen" rel="stylesheet">
+
+<!-- General Scripts -->
+<script src="js/general.js"></script>
+
+<!-- Lightbox prettyPhoto -->
+<link href="css/prettyPhoto.css" rel="stylesheet">
+<script src="js/jquery.prettyPhoto.js"></script>
+
+<!-- CarouFredSel  -->
+<script src="js/jquery.carouFredSel-6.2.1-packed.js"></script>
+
+    <script>
+        jQuery(document).ready(function($) {
+            $('#slider1').carouFredSel({
+                next : "#slider1_next",
+                prev : "#slider1_prev",
+                auto: false,
+                width: "100%",
+                height: "auto",
+                infinite: true,
+                circular: false,
+                scroll: {
+                    items : 1
+                }
+            });
+
+            $('#testimonials').carouFredSel({
+                    next : "#testimonials-next-1",
+                    prev : "#testimonials-prev-1",
+                    width: "100%",
+                    infinite: false,
+                    items: 1,
+                    align: "center",
+                    auto: {
+                        play: true,
+                        timeoutDuration: 8000
+                    },
+                    scroll: {
+                        items : 1,
+                        fx: "crossfade",
+                        easing: "linear",
+                        pauseOnHover: true,
+                        duration: 200
+                    }
+            });
+
+             $('#partners').carouFredSel({
+                next : "#partners-next",
+                prev : "#partners-prev",
+                auto: 8000,
+                scroll: {items : 1}
+            });
+        });
+
+    </script>
+
+<!--[if lt IE 9]><script src="js/respond.min.js"></script><![endif]-->
+<!--[if gte IE 9]>
+<style type="text/css">
+    .gradient {filter: none !important;}
+</style>
+<![endif]-->
+</head>
+
+<body>
+<div class="body-wrap">
+    <!-- container -->
+    <div class="container">
+       
+        <!-- .row -->
+        <div class="row">
+            <div class="col-sm-12">
+            <h6 class="foo"></h6>
+            <br>
+            <!-- TopSlider -->
+                <div class="top_slider">
+                    <div class="carousel_slider">
+                        <ul class="carousel_content" id="slider1">
+                            <li class="slider_item">
+                                <a href="#"><img src="images/temp/slide_1_1.jpg" alt=""><span class="slider_caption"><strong>BESTIVAL</strong> <em>AUG 21 | BUCHAREST</em></span></a>
+                            </li>
+                            <li class="slider_item">
+                                <a href="#"><img src="images/temp/slide_1_2.jpg" alt=""><span class="slider_caption"><strong>DIESEL CLUB</strong> <em>AUG 22 | IBIZA</em></span></a>
+                            </li>
+                            <li class="slider_item">
+                                <a href="#"><img src="images/temp/slide_1_3.jpg" alt=""><span class="slider_caption"><strong>Werchter</strong> <em>SEP 06 | WERCHTER</em></span></a>
+                            </li>
+                            <li class="slider_item">
+                                <a href="#"><img src="images/temp/slide_1_4.jpg" alt=""><span class="slider_caption"><strong>Jazz Festival</strong> <em>SEP 25 | Guimaraes</em></span></a>
+                            </li>
+                            <li class="slider_item">
+                                <a href="#"><img src="images/temp/slide_1_5.jpg" alt=""><span class="slider_caption"><strong>Hero Complex</strong> <em>OCT 3-10 | LA, USA</em></span></a>
+                            </li>
+                        </ul>
+                        <a class="prev" id="slider1_prev" href="#"></a>
+                        <a class="next" id="slider1_next" href="#"></a>
+                    </div>
+                </div>
+            <!-- /TopSlider -->
+            </div>
+        </div>
+        <!-- /.row -->
+
+    </div>
+    <!--/ container -->
+
+    <!-- Home Slider -->
+    <div class="home_slider clearfix">
+        <div id="kit_wrapper">
+            <div id="kit_carousel">
+                <div class="slide_item kit_item">
+                    <img src="images/temp/slider_1_1.jpg" alt="">
+                    <span class="zoom"></span>
+                    <div class="slide_caption">
+                        <a href="kit-details.html" class="slide_title"><strong>Metro GUI kit</strong></a>
+                        <span class="caption_left">150+ vector elements</span>
+                        <a href="kit-details.html" class="caption_right">View all the elements</a>
+                    </div>  
+                </div>
+                <div class="slide_item kit_item">
+                    <img src="images/temp/slider_1_2.jpg" alt="">
+                    <span class="zoom"></span>
+                    <div class="slide_caption">
+                        <a href="kit-details.html" class="slide_title"><strong>BlueMarine GUI kit</strong></a>
+                        <span class="caption_left">120+ vector elements</span>
+                        <a href="kit-details.html" class="caption_right">View all the elements</a>
+                    </div>
+                </div>
+                <div class="slide_item kit_item">
+                    <img src="images/temp/slider_1_3.jpg" alt="">
+                    <span class="zoom"></span>
+                    <div class="slide_caption">
+                        <a href="kit-details.html" class="slide_title"><strong>Cream Biscuit GUI kit</strong></a>
+                        <span class="caption_left">150+ vector elements</span>
+                        <a href="kit-details.html" class="caption_right">View all the elements</a>
+                    </div>
+                </div>
+                <div class="slide_item kit_item">
+                    <img src="images/temp/slider_1_4.jpg" alt="">
+                    <span class="zoom"></span>
+                    <div class="slide_caption">
+                        <a href="kit-details.html" class="slide_title"><strong>Happyness GUI kit</strong></a>
+                        <span class="caption_left">160+ vector elements</span>
+                        <a href="kit-details.html" class="caption_right">View all the elements</a>
+                    </div>
+                </div>
+                <div class="slide_item kit_item">
+                    <img src="images/temp/slider_1_5.jpg" alt="">
+                    <span class="zoom"></span>
+                    <div class="slide_caption">
+                        <a href="kit-details.html" class="slide_title"><strong>Vanilla Sky GUI kit</strong></a>
+                        <span class="caption_left">80+ vector elements</span>
+                        <a href="kit-details.html" class="caption_right">View all the elements</a>
+                    </div>
+                </div>              
+                <div class="slide_item kit_item">
+                    <img src="images/temp/slider_1_6.jpg" alt="">
+                    <span class="zoom"></span>
+                    <div class="slide_caption">
+                        <a href="kit-details.html" class="slide_title"><strong>Coffee GUI kit</strong></a>
+                        <span class="caption_left">100+ vector elements</span>
+                        <a href="kit-details.html" class="caption_right">View all the elements</a>
+                    </div>
+                </div>
+                <div class="slide_item kit_item">
+                    <img src="images/temp/slider_1_7.jpg" alt="">
+                    <span class="zoom"></span>
+                    <div class="slide_caption">
+                        <a href="kit-details.html" class="slide_title"><strong>Super Icon Set</strong></a>
+                        <span class="caption_left">100+ icons</span>
+                        <a href="kit-details.html" class="caption_right">View all the elements</a>
+                    </div>
+                </div>
+            </div>
+            <div id="kit_nav">
+            <a id="kit_prev" href="#" title="Previous"></a>
+            <a id="kit_next" href="#" title="Next"></a>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+    function isiPad(){
+        return (navigator.platform.indexOf("iPad") != -1);
+    }
+    
+    jQuery(document).ready(function ($) {
+        var defaultCss1 =  {width: 206,height: 134,marginTop: 15};
+        var selectedCss1 = {width: 240,height: 156,marginTop: 0};               
+        var defaultCss2 =  {width: 574,height: 372,marginTop: 30};
+        var selectedCss2 = {width: 670,height: 434,marginTop: 0};
+        var defaultCss3 =  {width: 695,height: 450,marginTop: 60};
+        var selectedCss3 = {width: 822,height: 534,marginTop: 20};
+        
+        var screenRes = $(window).width();
+        if (screenRes <= 480) {
+            var defaultCss = defaultCss1;
+            var selectedCss = selectedCss1;
+        } else if ( isiPad() ){ 
+            var defaultCss = defaultCss2;
+            var selectedCss = selectedCss2;
+        } else {
+            var defaultCss = defaultCss3;
+            var selectedCss = selectedCss3;
+        }
+        
+        var aniOpts = {
+            queue: false,
+            duration: 400,
+            easing: 'swing'
+        };
+        var $car = $('#kit_carousel');
+        for (var a = 0; a < 3; a++) {
+            $car.prepend('<div class="slide_item" />');
+        }
+        for (var a = 0; a < 3; a++) {
+            $car.append('<div class="slide_item" />');
+        }
+        $car.find('.slide_item').css('zIndex', 1).css(defaultCss).removeClass('current');
+        $car.find('.slide_item').eq(4).css('zIndex', 2).css(selectedCss).addClass('current'); // active slide 3+N
+        $car.carouFredSel({
+            direction: "right", // direction when carousel autoplays
+            circular: false,
+            infinite: false,
+            swipe : {
+                onTouch: true
+            },
+            width: '100%',
+            height: 572,
+            items: {
+                visible: 7, // number of visibale items
+                start: 1 // active slide (N)
+            },
+            prev: '#kit_prev',
+            next: "#kit_next",
+            auto: {
+                play: true,
+                timeoutDuration: 100000
+            },
+            scroll: {
+                pauseOnHover: true,
+                items: 1,
+                duration: 400,
+                easing: 'swing',
+                onBefore: function (data) {                                                             
+                    data.items.old.eq(3).children(".zoom").fadeIn();
+                    data.items.visible.eq(3).children(".zoom").fadeOut();                   
+                    data.items.old.eq(3).css('zIndex', 1).animate(defaultCss, aniOpts).removeClass('current');
+                    data.items.visible.eq(3).css('zIndex', 2).animate(selectedCss, aniOpts).addClass('current');
+                    data.items.old.eq(3).children(".slide_caption").fadeOut(300);
+                    data.items.visible.eq(3).children(".slide_caption").fadeIn(300);    
+                }
+            }
+        });         
+    });
+    
+    </script>
+    <!-- / Home Slider -->
+
+    <!-- Widget Testimonials -->
+    <div class="widget-full-width boxed clearfix">
+        <!-- container-->
+        <div class="container">
+            <!-- row-->
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="testimonials-carousel clearfix">
+                        <ul id="testimonials">
+                            <li>
+                                <div class="testimonials-text"><p>About the author: Brent is a writer who has a love for creativity and enjoys experimenting with various techniques in print &amp; web writing. Check out his tutorials and articles.</p></div>
+                                <div class="testimonials-author"><a href="#"><span>BRENT JARVIS</span>, author</a></div>
+                                <div class="testimonials-avatar"><a href="#"><img src="images/temp/avatar7.png" alt="" /></a></div>
+                            </li>
+                            <li>
+                                <div class="testimonials-text"><p>About the author: Lene Marlin made her Norwegian debut on 12 October 1998, with the single "Unforgivable Sinner". It was the fastest selling single in Norwegian music history.</p></div>
+                                <div class="testimonials-author"><a href="#"><span>Lene Marlin</span>, singer</a></div>
+                                <div class="testimonials-avatar"><a href="#"><img src="images/temp/avatar8.png" alt="" /></a></div>
+                            </li>
+                            <li>
+                                <div class="testimonials-text"><p>About the author: Lorem ipsum dolor sit amet, consecte tur adipiscing elit. Nullam in dui maurisiva mus hendrerit arcu sed erat mole stie vehi cula. Sed auctor neque eu tellus.</p></div>
+                                <div class="testimonials-author"><a href="#"><span>John Doe</span>, artist</a></div>
+                                <div class="testimonials-avatar"><a href="#"><img src="images/temp/avatar6.png" alt="" /></a></div>
+                            </li>
+                        </ul>
+                        <a id="testimonials-prev-1" class="prev" href="#">prev</a>
+                        <a id="testimonials-next-1" class="next" href="#">next</a>
+                    </div>
+                </div>
+            </div>
+            <!--/ row-->
+        </div>
+        <!--/ container-->
+    </div>
+    <!--/ Widget Testimonials -->
+
+        <br><br><br><br>
+
+    <!-- Widget Partners -->
+    <div class="widget-full-width boxed">
+        <!-- container-->
+        <div class="container">
+            <!-- row-->
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="partners">
+                        <h3 class="partners-title">Technologies we use</h3>
+                        <ul id="partners">
+                            <li><a href="#"><img src="images/temp/partner1.png" alt="" /></a></li>
+                            <li><a href="#"><img src="images/temp/partner2.png" alt="" /></a></li>
+                            <li><a href="#"><img src="images/temp/partner3.png" alt="" /></a></li>
+                            <li><a href="#"><img src="images/temp/partner4.png" alt="" /></a></li>
+                            <li><a href="#"><img src="images/temp/partner5.png" alt="" /></a></li>
+                        </ul>
+                        <a id="partners-prev" class="prev" href="#">prev</a>
+                        <a id="partners-next" class="next" href="#">next</a>
+                    </div>
+                </div>
+            </div>
+            <!--/ row-->
+        </div>
+        <!--/ container-->
+    </div>
+    <!--/ Widget Partners -->
+
+    <!-- testimonials -->
+    <div class="after_content clearfix">
+        <div class="container">
+            
+            <div class="testimonials">
+                <div id="testimonials1">
+                    <div class="slide_item">
+                    <img src="images/temp/testimonials_1.jpg" alt="">
+                    <p>The quality of the GUI kits is second to none! Some of the best designers in the world hand crafted these eye-candy beauties! </p>
+                    </div>
+                    
+                    <div class="slide_item">
+                    <img src="images/temp/testimonials_2.jpg" alt="">
+                    <p>Working with the guys behing Pixelkit was indeed a pleasure. They let the creative juices flow and don’t get in your way!</p>
+                    </div>
+                    
+                    <div class="slide_item">
+                    <img src="images/temp/testimonials_3.jpg" alt="">
+                    <p>If this wasn’t so good quality, you could argue that there are lots of freebie kits out there, but nothing compares to what Pixelkit offers!</p>
+                    </div>
+                    
+                    <div class="slide_item">
+                    <img src="images/temp/testimonials_4.png" alt="">
+                    <p>The quality of the GUI kits is second to none! Some of the best designers in the world hand crafted these eye-candy beauties! </p>
+                    </div>
+                    
+                    <div class="slide_item">
+                    <img src="images/temp/testimonials_5.png" alt="">
+                    <p>In in nibh enim. Praesent ut tristique ipsum. Duis posuere aliquam arcu et condimentum. Aenean velit magna, lobortis eget pellentesque sed, malesuada in felis. </p>
+                    </div>
+                    
+                </div>            
+            <a class="prev" id="testimonials_prev" href="#"><span>prev</span></a>                   
+            <a class="next" id="testimonials_next" href="#"><span>next</span></a>
+            </div>
+            
+            <script>    
+            jQuery(document).ready(function($) {        
+                 $('#testimonials1').carouFredSel({
+                    next : "#testimonials_next",
+                    prev : "#testimonials_prev",
+                    infinite: true,
+                    circular: true,
+                    auto: false,
+                    width: '100%',
+                    scroll: {
+                        items : 1
+                    }
+                });
+             });
+            </script> 
+            
+            
+        </div>
+    </div>
+    <!--/ testimonials -->
+
+    <footer>
+        <!-- Footer Light -->
+        <div class="footer footer-light">
+            <div class="container">
+                <div class="divider-top"></div>
+                <div class="row">
+                    <div class="col-xs-6 col-sm-2">
+                        <div class="footer-menu">
+                            <h6>OUR HOSTING</h6>
+                            <ul>
+                                <li><a href="#">Website Hosting</a></li>
+                                <li><a href="#">Reseller Hosting</a></li>
+                                <li><a href="#">Cloud Servers</a></li>
+                                <li><a href="#">Site Supercharge</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-2">
+                        <div class="footer-menu">
+                            <h6>AFFILIATES</h6>
+                            <ul>
+                                <li><a href="#">Hosting Affiliates</a></li>
+                                <li><a href="#">Affiliate Banners</a></li>
+                                <li><a href="#">Affiliate Login</a></li>
+                                <li><a href="#">Affiliate Sign-up</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-2">
+                        <div class="footer-menu">
+                            <h6>SUPPORT</h6>
+                            <ul>
+                                <li><a href="#">Knowledgebase</a></li>
+                                <li><a href="#">Community Forum</a></li>
+                                <li><a href="#">Video Tutorials</a></li>
+                                <li><a href="#">Contact Support</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-2">
+                        <div class="footer-menu">
+                            <h6>ABOUT US</h6>
+                            <ul>
+                                <li><a href="#">About Cloud-Host</a></li>
+                                <li><a href="#">Our Team</a></li>
+                                <li><a href="#">In the Press</a></li>
+                                <li><a href="#">Contact us directly</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-2">
+                        <div class="footer-menu">
+                            <h6>CAREERS</h6>
+                            <ul>
+                                <li><a href="#">Join our Team</a></li>
+                                <li><a href="#">Job Offerings Board</a></li>
+                                <li><a href="#">Send your Resume</a></li>
+                                <li><a href="#">Begin Career</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-2">
+                        <div class="footer-menu">
+                            <h6>OUR ADDRESS</h6>
+                            <ul>
+                                <li><span>Rue Teissere, 2406</span></li>
+                                <li><span>Cannes, France</span></li>
+                                <li><span>Phone: +33(0) 93998</span></li>
+                                <li><span>Fax: +33(0) 5499798</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="divider-bottom"></div>
+                <div class="row">
+                    <div class="col-sm-2"><div class="footer-bottom"><a href="#"><i class="ico-footer-support"></i>Write an Email</a></div></div>
+                    <div class="col-sm-2"><div class="footer-bottom"><a href="#"><i class="ico-footer-support ico-footer-support2"></i>Live Chat 24/7</a></div></div>
+                    <div class="col-sm-4"><div class="footer-bottom"><a href="#"><i class="ico-footer-support ico-footer-support3"></i>Support: +33 (0) 9399 6998</a></div></div>
+                    <div class="col-sm-4"><div class="footer-bottom copyright"><span>&copy; Copyright 2012 | All rights reserved</span></div></div>
+                </div>
+            </div>
+        </div>
+        <!--/ Footer Light -->
+        
+        <!-- Footer Dark -->
+        <div class="footer footer-dark">
+            <div class="container">
+                <div class="divider-top"></div>
+                <div class="row">
+                    <div class="col-xs-6 col-sm-2">
+                        <div class="footer-menu">
+                            <h6>OUR HOSTING</h6>
+                            <ul>
+                                <li><a href="#">Website Hosting</a></li>
+                                <li><a href="#">Reseller Hosting</a></li>
+                                <li><a href="#">Cloud Servers</a></li>
+                                <li><a href="#">Site Supercharge</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-2">
+                        <div class="footer-menu">
+                            <h6>AFFILIATES</h6>
+                            <ul>
+                                <li><a href="#">Hosting Affiliates</a></li>
+                                <li><a href="#">Affiliate Banners</a></li>
+                                <li><a href="#">Affiliate Login</a></li>
+                                <li><a href="#">Affiliate Sign-up</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-2">
+                        <div class="footer-menu">
+                            <h6>SUPPORT</h6>
+                            <ul>
+                                <li><a href="#">Knowledgebase</a></li>
+                                <li><a href="#">Community Forum</a></li>
+                                <li><a href="#">Video Tutorials</a></li>
+                                <li><a href="#">Contact Support</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-2">
+                        <div class="footer-menu">
+                            <h6>ABOUT US</h6>
+                            <ul>
+                                <li><a href="#">About Cloud-Host</a></li>
+                                <li><a href="#">Our Team</a></li>
+                                <li><a href="#">In the Press</a></li>
+                                <li><a href="#">Contact us directly</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-2">
+                        <div class="footer-menu">
+                            <h6>CAREERS</h6>
+                            <ul>
+                                <li><a href="#">Join our Team</a></li>
+                                <li><a href="#">Job Offerings Board</a></li>
+                                <li><a href="#">Send your Resume</a></li>
+                                <li><a href="#">Begin Career</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-2">
+                        <div class="footer-menu">
+                            <h6>OUR ADDRESS</h6>
+                            <ul>
+                                <li><span>Rue Teissere, 2406</span></li>
+                                <li><span>Cannes, France</span></li>
+                                <li><span>Phone: +33(0) 93998</span></li>
+                                <li><span>Fax: +33(0) 5499798</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/ Footer Dark -->
+
+        
+
+    </footer>
+</div>
+</body>
+</html>
