@@ -1,7 +1,7 @@
 var placeService, autocomplete, placesList;
 
 function initialize() {
-//    console.info("initialize");
+    //    console.info("initialize");
     // Create the autocomplete object, restricting the search
     // to geographical location types.
     autocomplete = new google.maps.places.Autocomplete(
@@ -10,9 +10,9 @@ function initialize() {
             types: ['geocode']
         });
 
-//    google.maps.event.addListener(autocomplete, 'place_changed', function () {
-//        console.log(autocomplete.getPlace());
-//    });
+    //    google.maps.event.addListener(autocomplete, 'place_changed', function () {
+    //        console.log(autocomplete.getPlace());
+    //    });
 
     placesList = document.getElementById('places');
 }
@@ -66,40 +66,34 @@ function callback(results, status, pagination) {
         return;
     } else {
 
-        var placesListInnerHTML= '';
         for (var i = 0, place; place = results[i]; i++) {
-            placesListInnerHTML += '<li id=\"tr_' + place.place_id + '\"></li>';
-        }
 
-        placesList.innerHTML=placesListInnerHTML;
+            var divProdImg = document.createElement("div");
+            divProdImg.className = "product-img";
+            var img = document.createElement("img");
+            img.alt = "";
+            divProdImg.appendChild(img);
 
-        var liInnerHtml;
-        for (var i = 0, place; place = results[i]; i++) {
-            liInnerHtml='';
+            var li = document.createElement("li");
+            li.className = "product-item clearfix";
 
-            liInnerHtml+='<li style=\"border: 5px solid black\">';
+            if (i % 2 > 0) li.className = "product-item odd clearfix";
+
+            li.appendChild(divProdImg);
+            document.getElementById("places").appendChild(li);
+
+            img.src = "images/temp/thumb-4.jpg";
 
             var photos = place.photos;
             if (photos) {
-                liInnerHtml+=
-                    '<div id="imgleft"><img src=\"' + photos[0].getUrl({
-                    'maxWidth': 178,
-                    'maxHeight': 128
-                }) + '\" alt=\"\" class=\"left\" /></div>';
-            }else {
-                 liInnerHtml+=
-                    '<div id="imgleft"><img src=\"\" alt=\"\" class=\"left\" /></div>';
+                img.src = photos[0].getUrl({
+                    'maxWidth': 270 ,
+                    'maxHeight': 480
+                });
+
             }
-
-            liInnerHtml+='<h3>' + place.name + '</h3>';
-            liInnerHtml+='<p>' + place.name + '<p>';
-            liInnerHtml+='</li>';
-
-            document.getElementById('tr_' + place.place_id).innerHTML = liInnerHtml;
-        }
-
-        console.log(placesList.innerHTML);
-    }
+        } //for
+    } //else
 }
 
 
