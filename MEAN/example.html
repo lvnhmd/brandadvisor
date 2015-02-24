@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+</head>
+
+<body ng-app='app1' ng-controller='ListCtrl'>
+    <ul>
+        <li ng-repeat='item in list_items'>{{item}}</li>
+    </ul>
+    <button ng-click='addListItem()'>Add Item</button>
+
+    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.js'></script>
+    <script>
+        var app1 = angular.module('app1', [])
+        app1.controller('ListCtrl', function ($scope) {
+            console.log('init items')
+            $scope.list_items = [
+                'Item 1',
+                'Item 2',
+                'Item 3'
+            ];
+        console.log('post init items')
+        $scope.addListItem = function () {
+            console.log('push an item')
+            $scope.list_items.push('Item 4')
+        }
+        });
+    </script>
+</body>
+
+</html>

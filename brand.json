@@ -1,0 +1,25 @@
+{
+    name: 'A BATHING APE',
+    url: 'http://eu.bape.com/',
+    keywords: ['t-shirt','tshirt','jacket','wallet','hoody'],
+    logo: 'logos/eu.bape.com.png'
+}
+
+
+
+{name:'A BATHING APE','url':'http://eu.bape.com/','keywords':['t-shirt','tshirt','jacket','wallet','hoody'],'logo':'logos/eu.bape.com.png'}
+{'name':'B PRESCHOOL TOYS','url':'http://www.mybtoys.com/','keywords':['playset','blocks','microphone','aeroplane','sketchboard'],'logo':'logos/www.mybtoys.com.png'}
+{'name':'C6','url':'http://c6life.com/','keywords':['laptop','backpack'],'logo':'logos/c6life.com.png'}
+{'name':'D SQUARED','url':'http://www.dsquared2.com/','keywords':['jeans','jogging','bottoms','t-shirt','tshirt','eau de toilette','perfume','jacket','wallet','cap','belt'],'logo':'logos/www.dsquared2.com.png '}
+{'name':'E-CLOTH','url':'http://www.e-cloth.com/','keywords':['cloth','mop'],'logo':'logos/www.e-cloth.com.jpg'}
+
+db.brands.insert({name:'A BATHING APE','url':'http://eu.bape.com/','keywords':['t-shirt','tshirt','jacket','wallet','hoody'],'logo':'logos/eu.bape.com.png'})
+db.brands.insert({'name':'B PRESCHOOL TOYS','url':'http://www.mybtoys.com/','keywords':['playset','blocks','microphone','aeroplane','sketchboard'],'logo':'logos/www.mybtoys.com.png'})
+db.brands.insert({'name':'C6','url':'http://c6life.com/','keywords':['laptop','backpack'],'logo':'logos/c6life.com.png'})
+db.brands.insert({'name':'D SQUARED','url':'http://www.dsquared2.com/','keywords':['jeans','jogging','bottoms','t-shirt','tshirt','eau de toilette','perfume','jacket','wallet','cap','belt'],'logo':'logos/www.dsquared2.com.png '})
+db.brands.insert({'name':'E-CLOTH','url':'http://www.e-cloth.com/','keywords':['cloth','mop'],'logo':'logos/www.e-cloth.com.jpg'})
+
+
+1.enter anything in the search box
+2.find it in mongo
+3.display in page
