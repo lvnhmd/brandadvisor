@@ -5,8 +5,6 @@
     logo: 'logos/eu.bape.com.png'
 }
 
-
-
 {name:'A BATHING APE','url':'http://eu.bape.com/','keywords':['t-shirt','tshirt','jacket','wallet','hoody'],'logo':'logos/eu.bape.com.png'}
 {'name':'B PRESCHOOL TOYS','url':'http://www.mybtoys.com/','keywords':['playset','blocks','microphone','aeroplane','sketchboard'],'logo':'logos/www.mybtoys.com.png'}
 {'name':'C6','url':'http://c6life.com/','keywords':['laptop','backpack'],'logo':'logos/c6life.com.png'}
