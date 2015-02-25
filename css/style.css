@@ -1991,7 +1991,7 @@ h6.foo2 {
 	font-size: 13px;
 	text-align: center;
 	white-space: nowrap;
-	margin: 0 5px 10px 12px;
+	margin: 0 0px 0px 16px;
 	color:#6f6f6f;
 	background:#f1f1f1;
 	padding-right:15px;
@@ -2004,9 +2004,9 @@ h6.foo2 {
 	left:-12px;
 	content:"";
 	width: 0px;
-	height: 34px;
+	height: 24px;
 	border-style: solid;
-	border-width: 17px 12px 17px 0;
+	border-width: 12px 12px 12px 0;
 	border-color: transparent #f1f1f1 transparent transparent;
 }
 
@@ -2021,9 +2021,9 @@ h6.foo2 {
 }
 
 .tagcloud a span {
-	display:block;
-  height: 34px;
-  line-height: 33px;
+  display:block;
+  height: 24px;
+  line-height: 23px;
 }
 
 .tagcloud.style2 a {

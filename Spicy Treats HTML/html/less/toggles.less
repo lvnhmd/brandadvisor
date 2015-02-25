@@ -1,0 +1,93 @@
+/*-----------------------------------*/
+/* Toggles */
+/*-----------------------------------*/
+.toggle {
+  position: relative;
+}
+.toggle-body .inner {
+  padding: 15px 0 0 0;
+  &:extend(.clearfix all);
+}
+.toggle-body p:first-child {
+  line-height: 20px;
+  margin-bottom: 0;
+}
+.toggle-link {
+  display: block;
+  position: relative;
+  font-size: @font-size-h5;
+  font-weight: 700;
+  color: @headings-color;
+  padding-right: 34px;
+  line-height: 1.2em;
+}
+.toggle-link span {
+  color: @color-custom-1;
+}
+
+.toggle-link:before {
+  content: "";
+  display: block;
+  border: 1px solid #cec7bb;
+  .square(36px);
+  background: url(images/icons/toggle-icons.png) center -34px no-repeat #fbfaf6;
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  z-index: 2;
+}
+.toggle-link.collapsed:before {
+  background-position: center 0px;
+}
+
+.toggle-links {
+  margin-bottom: 20px;
+}
+
+/* Dropbox content */
+.dropbox {
+  position: relative;
+
+  .dropbox-content {
+    display: none;
+    position: absolute;
+    top: 115%;
+    left: 0;
+    z-index: 1000;
+    min-width: 240px;
+    max-width: 300px;
+    .box-shadow(0 6px 12px rgba(0,0,0,.175));
+    background-clip: padding-box;
+
+    .close {
+      font-weight: 100;
+      color: @color-custom-1;
+      margin: 10px 15px 0 0;
+      opacity: 0.5;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    .widget {
+      margin-bottom: 0;
+
+      .stext {
+        padding-left: 10px;
+        padding-right: 10px;
+        background-image: none;
+      }
+    }
+  }
+}
+.dropbox.open .dropbox-content {
+  display: block;
+}
+
+// mobiles < 480px
+@media (max-width: (@screen-xs - 1)) {
+  .toggle-link {
+    font-size: 14px;
+  }
+}

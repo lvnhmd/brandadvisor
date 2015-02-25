@@ -1,0 +1,123 @@
+/*-----------------------------------*/
+/* Alerts */
+/*-----------------------------------*/
+.alert {
+  position: relative;
+  background-color: #faf5ed;
+  padding: 4px;
+
+  .alert-body {
+    border: 1px solid #d6c1aa;
+    padding: 3px;
+    font-size: @font-size-h4;
+    font-weight: 600;
+    color: @color-custom-2;
+
+    .inner {
+      border: 1px dashed #d6c1aa;
+      padding: 20px 20px 20px 50px;
+    }
+    p {
+      margin-bottom: 0;
+
+      span:first-child {
+        color: #6d6f79;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.alert-warning .alert-body p span:first-child { color: @brand-success;}
+.alert-error .alert-body p span:first-child { color: @brand-warning;}
+.alert-success .alert-body p span:first-child { color: @brand-info;}
+
+.alert-close {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right:0;
+  bottom:0;
+  float: none;
+  opacity: 1;
+  filter: alpha(opacity=100);
+  background-color: rgba(0,0,0,0);
+  overflow: hidden;
+  text-indent: 10000px;
+}
+.alert-icon{
+  position: absolute;
+  top: 22px;
+  left: -29px;
+  z-index: 2;
+  height: 38px;
+  display: inline-block;
+  background: url(images/ribbons-left.png) no-repeat right -38px transparent;
+  padding: 0 16px 0 0;
+
+  span {
+    display: block;
+    background: url(images/ribbons-left.png) no-repeat left 0 transparent;
+    height: 38px;
+    line-height: 33px;
+    width: 57px;
+    position: relative;
+
+    &:before {
+      content: "";
+      display: block;
+      .square(18px);
+      background: url(images/icons/alert-icons.png) 0 0 no-repeat;
+      position: absolute;
+      top: 7px;
+      right: 4px;
+    }
+  }
+}
+
+.alert-warning .alert-icon {
+  background-position: right -114px;
+
+  span {
+    background-position: left -76px;
+
+    &:before {
+      background-position: 0 -18px;
+    }
+  }
+}
+.alert-error .alert-icon {
+  background-position: right -190px;
+
+  span {
+    background-position: left -152px;
+
+    &:before {
+      background-position: 0 -36px;
+    }
+  }
+}
+.alert-success .alert-icon {
+  background-position: right -266px;
+
+  span {
+    background-position: left -228px;
+
+    &:before {
+      background-position: 0 -54px;
+    }
+  }
+}
+
+// mobiles < 480px
+@media (max-width: (@screen-xs - 1)) {
+
+  .alert .alert-body .inner {
+    padding: 20px 10px 20px 40px;
+  }
+
+}
+// mobiles 480-767px
+@media (min-width: @screen-xs-min) and (max-width: @screen-xs-max) {
+
+}

@@ -1,0 +1,65 @@
+/*-----------------------------------*/
+/* Rating Stars */
+/*-----------------------------------*/
+.rating {
+  display: inline-block;
+
+  span.star {
+    background: url(images/icons/icon-stars-small.png) no-repeat;
+    .square(14px);
+    float: left;
+  }
+  span.voted {
+    background-position: 0 -14px;
+  }
+  &.rating-vote span.star {
+    cursor: pointer;
+  }
+  &.rating-vote:hover span.star {
+    background-position: 0 0px !important;
+  }
+  &.rating-vote:hover span.star.over {
+    background-position: 0 -14px !important;
+  }
+}
+
+/* Rating Stars for Filter */
+/*-----------------------------------*/
+.rate {
+  display: inline-block;
+  width: 105px;
+  height: 20px;
+  background-image: url(images/icons/icon-stars.png);
+  background-repeat: no-repeat;
+  background-position: center 0;
+}
+.rate.rate-1 {
+  background-position: center 0;
+}
+.rate.rate-2 {
+  background-position: center -20px;
+}
+.rate.rate-3 {
+  background-position: center -40px;
+}
+.rate.rate-4 {
+  background-position: center -60px;
+}
+.rate.rate-5 {
+  background-position: center -80px;
+}
+
+// demo examples
+.rating-eg {
+  color: #a49a9b;
+  margin-bottom: 20px;
+
+  .label_title {
+    margin-right: 5px;
+    line-height: 14px;
+  }
+  .rating {
+    position: relative;
+    top: 3px;
+  }
+}

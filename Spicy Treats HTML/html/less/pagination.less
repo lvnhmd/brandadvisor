@@ -1,0 +1,89 @@
+/*-----------------------------------*/
+/* Pagination */
+/*-----------------------------------*/
+.tf_pagination {
+  margin: 20px 0;
+  text-align: center;
+
+  .inner {
+    padding: 0 10px;
+  }
+
+  .page-number {
+    display: inline-block;
+    border: 2px solid rgba(144,140,145,0.2);
+    padding: 0 10px;
+    margin: 2px;
+    line-height: 30px;
+    border-radius: 3px;
+    color: #bda791;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.6);
+    font-size: 13px;
+    font-weight: 600;
+    
+    &.page-current,
+    &:hover{
+      border-color: rgba(144,140,145,0.6);
+      background-color: rgba(62,57,64,0.6);
+      color: #fff;
+    }
+
+    &.disabled,
+    &.disbaled:hover {
+      border-color: rgba(144,140,145,0.2);
+      background-color: inherit;
+      color: #bda791;
+    }
+  }
+  .page-prev,
+  .page-next{
+    border-width: 0;
+    display: inline-block;
+    text-transform: uppercase;
+    padding: 3px;
+    position: relative;
+    top: 0px;
+
+    span {
+      display: block;
+      padding-left: 5px;
+      padding-right: 5px;
+      height: 28px;
+      line-height: 26px;
+      font-size: 13px;
+      color: #bda791;
+      text-shadow: 0 1px 1px rgba(0,0,0,0.3);
+
+      i {
+        display: block;
+        width: 26px;
+        height: 26px;
+        line-height: 24px;
+        font-weight: normal;
+        background: url(images/icons/chevron-left-right.png) 0 0 no-repeat;
+      }
+    }
+  }
+  .page-prev span {
+    padding: 0 10px 0 0;
+
+    i {
+      float: left;
+      border-right: 1px solid rgba(255,255,255,0.1);
+      padding-right: 5px;
+      margin-right: 10px;
+      background-position: center 6px;
+    }
+  }
+  .page-next span {
+    padding: 0 0 0 10px;
+
+    i {
+      float: right;
+      border-left: 1px solid rgba(255,255,255,0.1);
+      padding-left: 5px;
+      margin-left: 10px;
+      background-position: center -24px;
+    }
+  }
+}

@@ -41,13 +41,13 @@
 <![endif]-->
 </head>
 
-<body>
+<body ng-app='app' ng-controller='ListCtrl'>
     <div class="body-wrap">
         <div class="intro-header">
             <div class="container">
                 <div class="intro-message">
                     <h1></h1>
-<!--                    <h3>shmello</h3>-->
+                    <!--                    <h3>shmello</h3>-->
                     <!-- search widget -->
                     <div class="add-comment contact-form boxed margins">
                         <div class="inner">
@@ -55,7 +55,7 @@
                                 <div id="mainsearchfield" class="field_text lightPlaceholder">
                                     <input type="text" name="ba_where" id="ba_where" value="" placeholder="e.g Oxford Street, London, UK" onfocus="geolocate()" />
                                 </div>
-<!--
+                                <!--
                                 <div id="mainsearchfield" class="field_text lightPlaceholder">
                                     <input type="text" name="ba_what" id="ba_what" value="" placeholder="e.g socks" />
                                 </div>
@@ -71,40 +71,67 @@
             <!--/ container -->
         </div>
         <!--/  intro-header-->
-<!--        <ul class="big-image-list" id="places"></ul>-->
+        <!--        <ul class="big-image-list" id="places"></ul>-->
         <!-- .row-->
-		<div class="container">
-		<!--content-->
-		<div class="content " role="main">
-        <div class="row">
-				<div class="col-sm-12">
-					<div class="product-list clearfix">
-						<ul id="places">
-							<!-- .product-item -->
+        <div class="container">
+            <!--content-->
+            <div class="content " role="main">
+
+                <div class="row">
+                    <!-- Profile -->
+                    <div class="widget-container widget-profile boxed">
+                        <div class="inner clearfix">
+                            <div class="avatar"><img src="logos/eu.bape.com.png" alt="" />
+                            </div>
+
+                            <span class="subtitle"><a href="http://eu.bape.com" target="_new" title="2 topics">A BATHING APE</a></span>
+
+                            <div class="roundavatar"><img src="images/temp/avatar.png" alt=""/></div>
+
+                            <div class="tagcloud">
+                                <a href="#" title="2 topics"><span>t-shirt</span></a>
+                                <a href="#" title="3 topics"><span>tshirt</span></a>
+                                <a href="#" title="4 topics"><span>jacket</span></a>
+                                <a href="#" title="5 topics"><span>wallet</span></a>
+                                <a href="#" title="6 topics"><span>hoody</span></a>
+                            </div>
+                            <!--/ tags -->
 <!--
-							<li class="product-item clearfix">
-								<div class="product-img"><img src="images/temp/product-img-1.jpg" alt=""></div>
-								<div class="product-description">
-									<span class="brand-name">Jack &amp; Jones</span>
-									<a href="#"><span class="product-name">Sons Of Anarchy T-shirt</span></a>
-									<span class="product-features">Size: L  |  Color: Charcoal</span>
-								</div>
-								<div class="product-price"><span>$79</span></div>
-								<div class="product-stock"><img src="images/icons/yes.png" alt=""></div>
-								<div class="product-action"><a href="#" class="btn"><span>Buy Now</span></a>	</div>
-								<div class="product-remove"><a href="#"><img src="images/icons/remove.png" alt=""></a></div>
-							</li>
+                            <div class="follow">
+                                <a href="#" class="btn btn-green"><span>Follow</span></a>
+                                <div class="followers pull-right">
+                                    <strong>1687</strong>
+                                    <span>followers</span>
+                                </div>
+                            </div>
 -->
-							<!-- / .product-item -->
-                        </ul>
-					</div>
-				</div>
-			</div>
-			<!--/ .row-->
+                        </div>
+                    </div>
+                    <!--/ Profile -->
+
+                </div>
             </div>
         </div>
+        <!--/  container-->
     </div>
     <!--/  body-wrap-->
+    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.js'></script>
+    <script>
+        var app = angular.module('app', [])
+        app.controller('ListCtrl', function ($scope) {
+            console.log('init items')
+            $scope.list_items = [
+                'Item 1',
+                'Item 2',
+                'Item 3'
+            ];
+            console.log('post init items')
+            $scope.addListItem = function () {
+                console.log('push an item')
+                $scope.list_items.push('Item 4')
+            }
+        });
+    </script>
 </body>
 
 </html>

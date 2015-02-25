@@ -1,0 +1,117 @@
+/*-----------------------------------*/
+/* Tabs */
+/*-----------------------------------*/
+.tabs-framed {
+  padding: 7px 7px 12px 7px;
+  border-radius: 5px;
+  box-shadow: inset 0px 4px 4px -4px rgba(255,255,255, 0.6),
+              inset 0px -6px 4px -3px rgba(0,0,0, 0.8),
+              0 5px 5px 0 rgba(0,0,0,0.45);
+  background: url(images/tab-bg.jpg) 0 0;
+  margin-bottom: 30px;
+
+  .tabs {
+    li {
+      display: block;
+      float: left;
+      background-image: url(images/noisy-texture.png);
+      background-color: #e9e1cc;
+      margin-left: 3px;
+      position: relative;
+      top: 4px;
+      font-size: 14px;
+      line-height: 36px;
+      text-transform: uppercase;
+      font-weight: bold;
+
+      a {
+        display: block;
+        padding: 0 20px;
+        color: @color-custom-6;
+      }
+
+      &:first-child {
+        margin-left: 0;
+      }
+      &.active {
+        background-color: #fffffe;
+        line-height: 40px;
+        top: 0;
+
+        a {
+          color: @brand-warning;
+        }
+      }
+    }
+  }
+
+  .tab-pane {
+    &:extend(.clearfix all);
+  }
+
+  .tab-content {
+    background-image: url(images/noisy-texture.png);
+    background-color: #fffffe;
+    padding: @tab-padding @tab-padding 0 @tab-padding;
+    box-shadow: 0 2px 2px 2px rgba(0,0,0,0.3);
+    color: @text-color-base;
+
+    .image-frame {
+      margin-bottom: 5px;
+    }
+
+    img.alignleft {
+      margin: 4px 20px 5px 0;
+
+      &.nomargin {
+        margin: -@tab-padding 20px 0 -@tab-padding;
+        box-shadow: 7px 0px 5px -2px rgba(0,0,0,0.25);
+      }
+    }
+    img.alignright {
+      margin: 4px 0 5px 20px;
+
+      &.nomargin {
+        margin: -@tab-padding -@tab-padding 0 20px;
+        box-shadow: -7px 0px 5px -2px rgba(0,0,0,0.25);
+      }
+    }
+
+    p {
+      margin-bottom: 15px;
+    }
+  }
+}
+.col-md-4 .tabs-framed .tab-content img.alignleft {
+  margin-right: 10px;
+}
+.col-md-4 .tabs-framed .tab-content img.alignright {
+  margin-left: 10px;
+}
+
+// mobiles < 480px
+@media (max-width: (@screen-xs - 1)) {
+
+  .tabs-framed .tabs li {
+    font-size: 12px;
+    line-height: 26px;
+    margin-left: 2px;
+    max-width: 32%;
+
+    a {
+      padding: 0 8px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    &.active {
+      line-height: 30px;
+    }
+  }
+
+
+}
+// mobiles 480-767px
+@media (min-width: @screen-xs-min) and (max-width: @screen-xs-max) {
+
+}

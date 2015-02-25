@@ -23,7 +23,7 @@
     margin-right: 2%;
     margin-bottom: 14px;
 */
-    width: 42%;
+    width: 87%;
 /*    position: relative;*/
 }
 
@@ -34,3 +34,21 @@
 }
 */
 
+.roundavatar {
+    .square(70px);
+    float: left;
+    margin: -5px 14px 0 0;
+    img {
+        border: 2px solid #484547;
+        padding: 3px;
+        background-color: transparent;
+        border-radius: 50%;
+    }
+}
+
+/*
+.circular img {
+	opacity: 0;
+	filter: alpha(opacity=0);
+	}
+*/

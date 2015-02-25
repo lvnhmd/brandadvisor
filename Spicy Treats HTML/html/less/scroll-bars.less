@@ -1,0 +1,166 @@
+/*-----------------------------------*/
+/* Scroll Bars */
+/*-----------------------------------*/
+/* default */
+.jspContainer {
+  overflow: hidden;
+  position: relative;
+}
+
+.jspPane{
+  position: absolute;
+}
+
+.jspVerticalBar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 16px;
+  height: 100%;
+  background: red;
+}
+
+.jspHorizontalBar{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 16px;
+  background: red;
+}
+
+.jspCap {
+  display: none;
+}
+
+.jspHorizontalBar .jspCap   {
+  float: left;
+}
+
+.jspTrack    {
+  background: #dde;
+  position: relative;
+}
+
+.jspDrag   {
+  background: #bbd;
+  position: relative;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+.jspHorizontalBar .jspTrack,
+.jspHorizontalBar .jspDrag{
+  float: left;
+  height: 100%;
+}
+
+.jspArrow   {
+  background: #50506d;
+  text-indent: -20000px;
+  display: block;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+}
+
+.jspArrow.jspDisabled {
+  cursor: default;
+  background: #80808d;
+}
+
+.jspVerticalBar .jspArrow{
+  height: 16px;
+}
+
+.jspHorizontalBar .jspArrow {
+  width: 16px;
+  float: left;
+  height: 100%;
+}
+
+.jspVerticalBar .jspArrow:focus {
+  outline: none;
+}
+
+.jspCorner{
+  background: #eeeef4;
+  float: left;
+  height: 100%;
+}
+
+/* custom */
+.scrollbars {margin-bottom: 30px;}
+.scrollbars p {visibility:hidden; opacity: 0;}
+.scrollbars p::selection{background: transparent; color: rgba(0, 0, 0, 0);}
+.scrollbars .scrollbar {
+  width: 25px;
+  height: 200px;
+  float: left;
+}
+
+.scrollbar * {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+.scrollbar {overflow: auto;}
+
+.jspContainer {overflow: hidden; position: relative;}
+.jspPane {position: absolute;}
+.jspHorizontalBar {display: none;}
+.jspVerticalBar{position: absolute; top: 0; right: 0; bottom: 0; width: 17px;}
+
+/* Bar */
+.jspTrack {
+  width: 11px;
+  margin: 0 auto;
+  border-radius: 6px;
+  background: #d9ddd3;
+  position: relative;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.18);
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.18);
+}
+/* Arrows */
+.jspArrow {
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;
+  width: 1px;
+  height: 0;
+  border-left: 2px solid transparent;
+  border-right: 2px solid transparent;
+  border-bottom: 4px solid #a9a8a5;
+  position: relative;
+  top: 9px;
+  z-index: 1;
+}
+.jspArrowDown {
+  border-top: 4px solid #a9a8a5;
+  border-bottom: none;
+  top: auto;
+  bottom: 9px;
+}
+
+/* Handle */
+.jspDrag {
+  width: 13px;
+  position: relative;
+  top: 0;
+  left: -1px;
+  z-index: 2;
+  cursor: pointer;
+  border-radius: 6px;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  background: rgb(254,254,254);
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZlZmVmZSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlMWUxZTEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -moz-linear-gradient(top,  rgba(254,254,254,1) 0%, rgba(225,225,225,1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(254,254,254,1)), color-stop(100%,rgba(225,225,225,1)));
+  background: -webkit-linear-gradient(top,  rgba(254,254,254,1) 0%,rgba(225,225,225,1) 100%);
+  background: -o-linear-gradient(top,  rgba(254,254,254,1) 0%,rgba(225,225,225,1) 100%);
+  background: -ms-linear-gradient(top,  rgba(254,254,254,1) 0%,rgba(225,225,225,1) 100%);
+  background: linear-gradient(to bottom,  rgba(254,254,254,1) 0%,rgba(225,225,225,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefe', endColorstr='#e1e1e1',GradientType=0 );
+}

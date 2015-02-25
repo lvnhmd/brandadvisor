@@ -1,0 +1,79 @@
+/*-----------------------------------*/
+/* Typography */
+/*-----------------------------------*/
+.title-style2 {
+  font-family: "Philosopher Bold";
+  font-size: 24px;
+  color: @color-custom-4;
+  margin-bottom: 2px;
+  line-height: 1em;
+}
+/* quote left/right */
+.quote-center,
+.quote-left,
+.quote-right {
+    font-size: 18px;
+    line-height: 1.4em;
+    font-weight: 600;
+    font-style: italic;
+    color: lighten(@color-custom-1,9);
+    width: 40%;
+    margin-bottom: 5px;
+}
+.quote-center {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+}
+.quote-left {
+  float: left;
+  margin-right: 5%;
+}
+.quote-right {
+  float: right;
+  margin-left: 5%;
+}
+
+img.alignleft {
+  margin: 4px 20px 5px 0;
+}
+img.alignright {
+  margin: 4px 0 5px 20px;
+}
+
+// mobiles < 480px
+@media (max-width: (@screen-xs - 1)) {
+
+  .quote-center,
+  .quote-left,
+  .quote-right {
+    float: none;
+    font-size: 16px;
+    width: 90%;
+    margin: 0 auto 10px auto;
+  }
+
+  img.alignleft {
+    margin: 4px 10px 5px 0;
+  }
+  img.alignright {
+    margin: 4px 0 5px 10px;
+  }
+}
+
+[class^="glyphicon-"],
+[class*=" glyphicon-"] {
+  margin-right: 5px;
+
+  &.pull-right {
+    margin-left: 8px;
+    position: relative;
+    top: 0.7em;
+  }
+}
+.btn-sm .glyphicon.pull-right {
+  top: 0.4em;
+}
+.btn-lg .glyphicon.pull-right {
+  top: 0.9em;
+}

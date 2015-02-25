@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<!--[if IE 7 ]><html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]><html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Spicy Treats | Forms & Filters</title>
+	<meta name="author" content="PixelKit">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.css">
+	<link rel="stylesheet" href="style.css">
+
+	<!--[if lt IE 9]>
+	<script src="js/libs/html5shiv.min.js"></script>
+	<script src="js/libs/respond.min.js"></script>
+	<![endif]-->
+
+</head>
+<body class="bg_img_cover" style="background-image: url(images/bg_body.jpg);">
+
+    <div class="middle_row">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-8">
+
+                    <!-- contact form -->
+                    <div class="tf-form contact-form">
+                        <form action="#" method="post" id="contactForm">
+                            <div class="inner">
+                                <h2 class="add-comment-title">Leave a reply</h2>
+
+                                <div class="row_field field_text">
+                                    <label for="name" class="label_title">Name</label>
+                                    <input type="text" name="name" id="name" value="" placeholder="Your Name" class="required" />
+                                </div>
+                                <div class="row_field field_text omega">
+                                    <label for="email" class="label_title">Email</label>
+                                    <input type="text" name="email" id="email" value="" placeholder="youremail@mail.com" class="required" />
+                                </div>
+                                <div class="clearfix"></div>
+                                <div class="row_field field_text">
+                                    <label for="site" class="label_title">Your Website</label>
+                                    <input type="text" name="name" id="site" value="" placeholder="Your Website" />
+                                </div>
+                                <div class="row_field field_select omega">
+                                    <label for="contact_subject" class="label_title">Subject</label>
+                                    <select class="select_styled" name="contact_subject" id="contact_subject">
+                                        <option value="">Select department</option>
+                                        <option value="1">Prepurchase Question</option>
+                                        <option value="2">Support Question</option>
+                                        <option value="3">Affiliate Program</option>
+                                        <option value="4">Feedback</option>
+                                        <option value="5">Submit Theme</option>
+                                    </select>
+                                </div>
+                                <div class="clearfix"></div>
+                                <div class="row_field field_textarea text-editor">
+                                    <label for="message" class="label_title">Message</label>
+                                    <textarea name="message" id="message" class="required" placeholder="Message"></textarea>
+                                </div>
+                            </div>
+                            <div class="row_field rowSubmit clearfix">
+                                <div class="input_styled checklist">
+                                    <div class="rowCheckbox"><input name="signup" type="checkbox" checked id="signup" value="signup"><label for="signup">Newsletter Sign Up</label></div>
+                                </div>
+
+                                <span class="btn btn-primary"><input type="submit" id="send" value="Send Mail" /></span>
+                            </div>
+                        </form>
+                    </div>
+                    <!--/ contact form -->
+
+                    <!-- survey form -->
+                    <div class="tf-form contact-form">
+                        <form action="#" method="post" id="surveyForm">
+                            <div class="inner">
+
+                                <h2 class="add-comment-title">Satisfaction about the product?</h2>
+
+                                <div class="row_field input_styled checklist">
+                                    <div class="rowCheckbox">
+                                        <input type="checkbox" name="survey_1_1" id="survey_1_1" value="1">
+                                        <label for="survey_1_1">Extremely satisfied</label>
+                                    </div>
+                                    <div class="rowCheckbox">
+                                        <input type="checkbox" name="survey_1_2" id="survey_1_2" value="1">
+                                        <label for="survey_1_2">Very satisfied</label>
+                                    </div>
+                                    <div class="rowCheckbox">
+                                        <input type="checkbox" name="survey_1_3" id="survey_1_3" value="1">
+                                        <label for="survey_1_3">Neutral</label>
+                                    </div>
+                                    <div class="rowCheckbox">
+                                        <input type="checkbox" name="survey_1_4" id="survey_1_4" value="1">
+                                        <label for="survey_1_4">Very dissatisfied</label>
+                                    </div>
+                                    <div class="rowCheckbox">
+                                        <input type="checkbox" name="survey_1_5" id="survey_1_5" value="1">
+                                        <label for="survey_1_5">Extremely dissatisfied</label>
+                                    </div>
+                                </div>
+
+                                <div class="clearfix"></div>
+
+                                <h2 class="add-comment-title">Would you recommend us in the future?</h2>
+
+                                <div class="row_field input_styled radiolist">
+                                    <div class="rowRadio">
+                                        <input type="radio" name="survey_2" value="survey_2_1" id="survey_2_1">
+                                        <label for="survey_2_1">Very likely</label>
+                                    </div>
+                                    <div class="rowRadio">
+                                        <input type="radio" name="survey_2" value="survey_2_2" id="survey_2_2">
+                                        <label for="survey_2_2">Somewhat likely</label>
+                                    </div>
+                                    <div class="rowRadio">
+                                        <input type="radio" name="survey_2" value="survey_2_3" id="survey_2_3">
+                                        <label for="survey_2_3">Eh, not sure </label>
+                                    </div>
+                                    <div class="rowRadio">
+                                        <input type="radio" name="survey_2" value="survey_2_4" id="survey_2_4" checked>
+                                        <label for="survey_2_4">Somewhat unlikely</label>
+                                    </div>
+                                    <div class="rowRadio">
+                                        <input type="radio" name="survey_2" value="survey_2_5" id="survey_2_5">
+                                        <label for="survey_2_5">Very unlikely</label>
+                                    </div>
+                                </div>
+
+                                <div class="clearfix"></div>
+
+                                <h2 class="add-comment-title">What are the three main reasons?</h2>
+
+                                <div class="row_field field_textarea text-editor">
+                                    <label for="survey_message" class="label_title">Message</label>
+                                    <textarea name="survey_message" id="survey_message" class="required" placeholder="Message"></textarea>
+                                </div>
+                            </div>
+                            <div class="row_field rowSubmit clearfix">
+                                <span class="btn btn-primary"><input type="submit" id="send" value="Send Mail" /></span>
+                            </div>
+                        </form>
+                    </div>
+                    <!--/ survey form -->
+
+                    <!-- form with tabs -->
+                    <div class="tabs-framed payment-form">
+                        <div class="inner">
+                            <ul class="tabs clearfix">
+                                <li class="active"><a href="#billing" data-toggle="tab">Billing</a></li>
+                                <li><a href="#shipping" data-toggle="tab">Shipping</a></li>
+                                <li><a href="#payment" data-toggle="tab">Payment</a></li>
+                            </ul>
+
+                            <form class="tab-content" action="#" method="post" id="tabsForm">
+
+                                <div class="tab-pane fade in active" id="billing">
+                                    <div class="field_text">
+                                        <label for="from_name" class="label_title">Your First Name:</label>
+                                        <input type="text" name="from_name" id="from_name" value="" placeholder="Your First Name" />
+                                    </div>
+                                    <div class="field_text omega">
+                                        <label for="from_surname" class="label_title">Your Last Name:</label>
+                                        <input type="text" name="from_surname" id="from_surname" value="" placeholder="Your Last Name" />
+                                    </div>
+
+                                    <div class="clearfix"></div>
+
+                                    <div class="field_text">
+                                        <label for="from_email" class="label_title">Your Email:</label>
+                                        <input type="text" name="from_email" id="from_email" value="" placeholder="Your Email" />
+                                    </div>
+                                    <div class="field_text omega">
+                                        <label for="from_company" class="label_title">Company name:</label>
+                                        <input type="text" name="from_company" id="from_company" value="" placeholder="Your Company Name" />
+                                    </div>
+
+                                    <div class="clearfix"></div>
+
+                                    <div class="field_text field_phone clearfix">
+                                        <label for="from_phone_1" class="label_title">Phone:</label>
+                                        <input type="text" name="from_phone_1" id="from_phone_1" value="" placeholder="Phone" />
+                                        <input type="text" name="from_phone_2" id="from_phone_2" value="" />
+                                        <input type="text" name="from_phone_3" id="from_phone_3" value="" class="omega" />
+                                    </div>
+                                    <div class="field_text omega">
+                                        <label for="from_address" class="label_title">Your Address:</label>
+                                        <input type="text" name="from_address" id="from_address" value="" placeholder="Your Address" />
+                                    </div>
+
+                                    <div class="clearfix"></div>
+
+                                    <div class="rowSubmit clearfix">
+                                        <div class="input_styled checklist checkbox-switch ">
+                                            <div class="rowCheckbox"><input name="invoice" type="checkbox" checked id="invoice" value="invoice"><label for="invoice">Send invoice via email</label></div>
+                                        </div>
+                                        <a href="#" class="btn btn-primary btn-next"><span>Continue</span></a>
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane fade" id="shipping">
+
+                                    <div class="input_styled checklist inline">
+                                        <div class="rowCheckbox"><input name="sameAddress" type="checkbox" checked id="sameAddress" value="sameAddress"><label for="sameAddress">Use the same shipping address as the billing address.</label></div>
+                                    </div>
+                                    <div class="field_text">
+                                        <label for="from_name_2" class="label_title">Your First Name:</label>
+                                        <input type="text" name="from_name_2" id="from_name_2" value="" placeholder="Your First Name" />
+                                    </div>
+                                    <div class="field_text omega">
+                                        <label for="from_surname_2" class="label_title">Your Last Name:</label>
+                                        <input type="text" name="from_surname_2" id="from_surname_2" value="" placeholder="Your Last Name" />
+                                    </div>
+
+                                    <div class="clearfix"></div>
+
+                                    <div class="field_text">
+                                        <label for="from_email_2" class="label_title">Your Email:</label>
+                                        <input type="text" name="from_email_2" id="from_email_2" value="" placeholder="Your Email" />
+                                    </div>
+                                    <div class="field_text omega">
+                                        <label for="from_company_2" class="label_title">Company name:</label>
+                                        <input type="text" name="from_company_2" id="from_company_2" value="" placeholder="Your Company Name" />
+                                    </div>
+
+                                    <div class="clearfix"></div>
+
+                                    <div class="field_text field_phone clearfix">
+                                        <label for="from_phone_2_1" class="label_title">Phone:</label>
+                                        <input type="text" name="from_phone_2_1" id="from_phone_2_1" value="" placeholder="Phone" />
+                                        <input type="text" name="from_phone_2_2" id="from_phone_2_2" value="" />
+                                        <input type="text" name="from_phone_2_3" id="from_phone_2_3" value="" class="omega" />
+                                    </div>
+                                    <div class="field_text omega">
+                                        <label for="from_address_2" class="label_title">Your Address:</label>
+                                        <input type="text" name="from_address_2" id="from_address_2" value="" placeholder="Your Address" />
+                                    </div>
+
+                                    <div class="clearfix"></div>
+
+                                    <div class="rowSubmit clearfix">
+                                        <a class="btn-left" href="#"><span>Back</span></a>
+                                        <a href="#" class="btn btn-primary btn-next"><span>Continue</span></a>
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane fade" id="payment">
+
+                                    <div class="input_styled checklist">
+                                        <div class="rowCheckbox checkbox-switch label-right">
+                                            <input name="invoice" type="checkbox" id="recurring-payment" value="recurring-payment">
+                                            <label for="recurring-payment">Recurring payment</label>
+                                        </div>
+                                    </div>
+                                    <div class="input_styled radiolist inline">
+                                        <div class="rowRadio">
+                                            <input type="radio" name="card-type" value="visa" id="visa" checked>
+                                            <label for="visa"><img src="images/icons/visa.png" alt="" /></label>
+                                        </div>
+                                        <div class="rowRadio omega">
+                                            <input type="radio" name="card-type" value="paypal" id="paypal">
+                                            <label for="paypal"><img src="images/icons/paypal.png" alt="" /></label>
+                                        </div>
+                                    </div>
+                                    <div class="clearfix"></div>
+
+                                    <div class="field_text">
+                                        <label for="card_number" class="label_title">Card number</label>
+                                        <input type="text" name="card_number" id="card_number" value="" placeholder="Card number" />
+                                    </div>
+                                    <div class="field_text omega">
+                                        <label for="card_name" class="label_title">Name on the card</label>
+                                        <input type="text" name="card_name" id="card_name" value="" placeholder="Name on the card" />
+                                    </div>
+
+                                    <div class="clearfix"></div>
+
+                                    <div class="field_select clearfix">
+                                        <label for="expiration-month" class="label_title">Expiration date</label>
+
+                                        <div class="field_half">
+                                            <select class="select_styled" name="expiration-month" id="expiration-month">
+                                                <option value="">Exp. Month</option>
+                                                <option value="01">January</option>
+                                                <option value="02">February</option>
+                                                <option value="03">March</option>
+                                                <option value="04">April</option>
+                                                <option value="05">May</option>
+                                                <option value="06">June</option>
+                                                <option value="07">July</option>
+                                                <option value="08">August</option>
+                                                <option value="09">September</option>
+                                                <option value="10">October</option>
+                                                <option value="11">Novevmber</option>
+                                                <option value="12">December</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="field_half omega">
+                                            <select class="select_styled" name="expiration-year" id="expiration-year">
+                                                <option value="">Exp. Year</option>
+                                                <option value="2014">2014</option>
+                                                <option value="2015">2015</option>
+                                                <option value="2016">2016</option>
+                                                <option value="2017">2017</option>
+                                                <option value="2018">2018</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="field_text omega">
+                                        <label for="card-code" class="label_title">Security code</label>
+                                        <input type="text" name="card-code" id="card-code" value="" placeholder="Security Code" />
+                                    </div>
+
+                                    <div class="clearfix"></div>
+
+                                    <div class="rowSubmit clearfix">
+                                        <a class="btn-left" href="#"><span>Back</span></a>
+                                        <a href="#" class="btn btn-primary"><span>Process Order</span></a>
+                                    </div>
+
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                    <!--/ form with tabs -->
+
+                </div>
+
+                <div class="col-md-4">
+
+                    <!-- widget categories filter -->
+                    <div class="widget widget-categories-filter">
+                        <div class="widget-outer">
+                            <div class="widget-inner">
+
+                                <h3 class="widget-title">Filter Categories</h3>
+
+                                <div class="widget-text">
+                                    <ul>
+                                        <li><a href="#"><span>Quisque magna</span></a></li>
+                                        <li><a href="#"><span>Vivamus facilisis pretium</span></a></li>
+                                        <li class="current-menu-item"><a href="#"><span>Elementum</span></a></li>
+                                        <li><a href="#"><span>Donec vulputate mattis</span></a></li>
+                                        <li><a href="#"><span>Aenean non</span></a></li>
+                                        <li><a href="#"><span>Quisque gravida</span></a></li>
+                                        <li><a href="#"><span>Phasellus</span></a></li>
+                                        <li><a href="#"><span>Mauris vel consectetur</span></a></li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!--/ widget categories filter -->
+
+                    <!-- checkbox filter -->
+                    <div class="widget widget-checkbox-filter">
+                        <div class="widget-outer">
+                            <div class="widget-inner">
+
+                                <h3 class="widget-title">Checkbox Filter</h3>
+
+                                <form action="#" method="post" class="filter-form">
+                                    <div class="input_styled checklist">
+                                        <div class="rowCheckbox"><input name="checkbox7" type="checkbox" id="checkbox7" value="checkbox7" checked><label for="checkbox7">Curabitur At Nulla <span class="counter">(48)</span></label></div>
+                                        <div class="rowCheckbox"><input name="checkbox8" type="checkbox" id="checkbox8" value="checkbox8"><label for="checkbox8">Aliquam Mi <span class="counter">(54)</span></label></div>
+                                        <div class="rowCheckbox"><input name="checkbox9" type="checkbox" id="checkbox9" value="checkbox9" checked><label for="checkbox9">Aliquam Imperdiet <span class="counter">(153)</span></label></div>
+                                        <div class="rowCheckbox"><input name="checkbox10" type="checkbox" id="checkbox10" value="checkbox10"><label for="checkbox10">Ullamcorper <span class="counter">(15)</span></label></div>
+                                        <div class="rowCheckbox"><input name="checkbox11" type="checkbox" id="checkbox11" value="checkbox11" checked><label for="checkbox11">Porttitor <span class="counter">(618)</span></label></div>
+                                    </div>
+                                    <div class="rowSubmit">
+                                        <span class="btn btn-sm"><input type="submit" id="send5" value="Filter Results" /></span>
+                                    </div>
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!--/ checkbox filter -->
+
+                    <!-- radiobox filter -->
+                    <div class="widget widget-radiobox-filter">
+                        <div class="widget-outer">
+                            <div class="widget-inner">
+
+                                <h3 class="widget-title">Radiobox Filter</h3>
+
+                                <form action="#" method="post" class="filter-form">
+                                    <div class="input_styled radiolist clearfix">
+                                        <div class="rowRadio">
+                                            <input type="radio" name="rate" value="radio8" id="radio8">
+                                            <label for="radio8"><span class="rate rate-1"></span></label>
+                                        </div>
+                                        <div class="rowRadio">
+                                            <input type="radio" name="rate" value="radio9" id="radio9">
+                                            <label for="radio9"><span class="rate rate-2"></span></label>
+                                        </div>
+                                        <div class="rowRadio">
+                                            <input type="radio" name="rate" value="radio10" id="radio10">
+                                            <label for="radio10"><span class="rate rate-3"></span></label>
+                                        </div>
+                                        <div class="rowRadio">
+                                            <input type="radio" name="rate" value="radio11" id="radio11" checked>
+                                            <label for="radio11"><span class="rate rate-4"></span></label>
+                                        </div>
+                                        <div class="rowRadio">
+                                            <input type="radio" name="rate" value="radio12" id="radio12">
+                                            <label for="radio12"><span class="rate rate-5"></span></label>
+                                        </div>
+                                    </div>
+                                    <div class="rowSubmit">
+                                        <span class="btn btn-sm"><input type="submit" id="send6" value="Filter Results" /></span>
+                                    </div>
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!--/ radiobox filter -->
+
+                    <!-- search widget -->
+                    <div class="widget widget-search">
+                        <form method="get" action="#">
+                            <div class="field_text">
+                                <input type="text" value="" name="search" id="search" class="stext" placeholder="Type word here" />
+                            </div>
+                            <input type="submit" value="Search" class="sbtn" />
+                        </form>
+                    </div>
+                    <!--/ search widget -->
+
+                    <!-- widget advanced filter -->
+                    <div class="widget widget-adv-filter">
+                        <div class="widget-outer">
+                            <div class="widget-inner">
+
+                                <h3 class="widget-title">Advanced Filter</h3>
+
+                                <form action="#" method="post" class="filter-form">
+
+                                    <div class="rowDate adv-block">
+                                        <div class="field_text">
+                                            <input type="text" name="filter_date_in" value="" placeholder="Check in" id="filter_date_in" />
+                                        </div>
+                                    </div>
+                                    <div class="rowDate adv-block">
+                                        <div class="field_text">
+                                            <input type="text" name="filter_date_out" value="" placeholder="Check out" id="filter_date_out" />
+                                        </div>
+                                    </div>
+
+                                    <div class="input_styled checklist adv-block">
+                                        <h6>Category Title</h6>
+                                        <div class="rowCheckbox">
+                                            <input type="checkbox" name="filter_location_1" id="filter_location_1" value="1">
+                                            <label for="filter_location_1">Cras Scelerisque <span class="counter">(8)</span></label>
+                                        </div>
+                                        <div class="rowCheckbox">
+                                            <input type="checkbox" name="filter_location_2" id="filter_location_2" value="2" checked>
+                                            <label for="filter_location_2">Tempor Felis <span class="counter">(13)</span></label>
+                                        </div>
+                                        <div class="rowCheckbox">
+                                            <input type="checkbox" name="filter_location_3" id="filter_location_3" value="3">
+                                            <label for="filter_location_3">Aliquam Imperdiet <span class="counter">(32)</span></label>
+                                        </div>
+                                        <div class="rowCheckbox">
+                                            <input type="checkbox" name="filter_location_4" id="filter_location_4" value="4">
+                                            <label for="filter_location_4">Faucibus <span class="counter">(26)</span></label>
+                                        </div>
+                                        <div class="rowCheckbox">
+                                            <input type="checkbox" name="filter_location_5" id="filter_location_5" value="5">
+                                            <label for="filter_location_5">Praesent At Ultricies <span class="counter">(108)</span></label>
+                                        </div>
+                                    </div>
+
+                                    <div class="rangeField adv-block clearfix">
+                                        <h6>PRICE RANGE</h6>
+                                        <div class="range-slider">
+                                            <input id="price-range" type="text" name="price-range" value="240;760">
+                                        </div>
+                                    </div>
+
+                                    <div class="input_styled radiolist adv-block">
+                                        <h6>Rating</h6>
+
+                                        <div class="rowRadio">
+                                            <input type="radio" name="rate-filter" value="adv-radio1" id="adv-radio1">
+                                            <label for="adv-radio1">1 Star <span class="counter">(32)</span></label>
+                                        </div>
+                                        <div class="rowRadio">
+                                            <input type="radio" name="rate-filter" value="adv-radio2" id="adv-radio2">
+                                            <label for="adv-radio2">2 Star <span class="counter">(25)</span></label>
+                                        </div>
+                                        <div class="rowRadio">
+                                            <input type="radio" name="rate-filter" value="adv-radio3" id="adv-radio3">
+                                            <label for="adv-radio3">3 Star <span class="counter">(7)</span></label>
+                                        </div>
+                                        <div class="rowRadio">
+                                            <input type="radio" name="rate-filter" value="adv-radio4" id="adv-radio4" checked>
+                                            <label for="adv-radio4">4 Star <span class="counter">(21)</span></label>
+                                        </div>
+                                        <div class="rowRadio">
+                                            <input type="radio" name="rate-filter" value="adv-radio5" id="adv-radio5">
+                                            <label for="adv-radio5">5 Star <span class="counter">(16)</span></label>
+                                        </div>
+                                        <div class="rowRadio">
+                                            <input type="radio" name="rate-filter" value="adv-radio6" id="adv-radio6">
+                                            <label for="adv-radio6">Unrated <span class="counter">(4)</span></label>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="rowSubmit adv-block">
+                                        <span class="btn btn-sm"><input type="submit" id="send7" value="Filter Results" /></span>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/ widget advanced filter -->
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+	<!--/ container -->
+
+    <!-- JS footer -->
+	<script src="js/libs/jquery.min.js"></script>	
+	<script src="js/libs/bootstrap.min.js"></script>
+	
+	<!-- General Scripts -->
+	<script src="js/general.js"></script>
+	<!-- Custom input -->
+	<script src="js/jquery.customInput.js"></script>
+	<!-- styled select -->
+	<script src="js/cusel.min.js"></script>
+    <!-- placeholder for old browsers -->
+    <script src="js/jquery.powerful-placeholder.min.js"></script>
+
+    <!-- jquery calendar -->
+    <script src="js/libs/jquery-ui.min.js"></script>
+    <script>
+        // <![CDATA[
+        jQuery(document).ready(function($) {
+            $("#filter_date_in, #filter_date_out").datepicker({
+                dateFormat: 'MM dd, yy',
+                minDate: 0,
+                showOtherMonths: true
+            });
+        });
+        // ]]>
+    </script>
+
+    <!-- range sliders -->
+    <script src="js/jquery.slider.bundle.js"></script>
+    <script src="js/jquery.slider.js"></script>
+    <script type="text/javascript" >
+        jQuery(document).ready(function($) {
+            // Price Range Input
+            $("#price-range").rangeslider({
+                from: 0,
+                to: 1000,
+                limits: false,
+                scale: ['0$', '1000$'],
+                heterogeneity: ['50/500'],
+                step: 10,
+                smooth: true,
+                dimension: '$'
+            });
+        });
+    </script>
+
+    <!-- Text Editor -->
+    <script src="js/nicEdit.js"></script>
+    <script>
+        bkLib.onDomLoaded(function() {
+            var myNicEditor = new nicEditor({
+                buttonList : [
+                    'bold',
+                    'italic',
+                    'underline',
+                    'forecolor',
+                    'left',
+                    'center',
+                    'right',
+                    'justify'
+                ]
+            });
+            myNicEditor.panelInstance('message');
+            myNicEditor.panelInstance('survey_message');
+        });
+    </script>
+	
+</body>
+</html>
