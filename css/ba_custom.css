@@ -28,27 +28,102 @@
 }
 
 /*
-.margins {
-    margin-top: 20%;
-    margin-bottom: 20%;
+.roundavatar{
+  width: 50px;
+  height: 50px;
+  float: left;
+  margin: -5px 14px 0 0;
+
+}
+
+.roundavatar img{
+  border: 2px solid #484547;
+  padding: 3px;
+  background-color: transparent;
+  border-radius: 50%;
+
 }
 */
 
-.roundavatar {
-    .square(70px);
-    float: left;
-    margin: -5px 14px 0 0;
-    img {
-        border: 2px solid #484547;
-        padding: 3px;
-        background-color: transparent;
-        border-radius: 50%;
-    }
-}
-
+/*-----------------------------------*/
+/* Comments */
+/*-----------------------------------*/
 /*
-.circular img {
-	opacity: 0;
-	filter: alpha(opacity=0);
-	}
+.comments-section {
+  clear: both;
+  background: url(images/post-bg-pattern-1.png) #fffefb;
+  background-repeat: repeat;
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.45);
+  padding: 5px;
+}
+.comments-section .tf-form {
+  margin-bottom: 0;
+}
 */
+/*
+.comment-list {
+  background-color: rgba(233, 230, 225, 0.6);
+  border-top: 1px dashed #c8c6c1;
+  border-bottom: 1px dashed #c8c6c1;
+  padding: 25px;
+}
+.comment-list li.comment {
+  position: relative;
+  clear: both;
+}
+*/
+/*
+.comment-list .comment-body {
+  position: relative;
+  padding: 10px 0;
+}
+.comment-list .comment-text {
+  padding-left: 71px;
+}
+.comment-list .children {
+  padding-left: 61px;
+}
+*/
+
+.ba_comment-avatar {
+  width: 56px;
+  height: 56px;
+  float: left;
+  margin-right: 15px;
+}
+
+.ba_comment-avatar img {
+  padding: 2px;
+  background: #fff;
+  border: 1px solid #ee5190;
+  border-radius: 50%;
+}
+
+.comment-entry {line-height: 19px;color:#212121;}
+/*
+.comment-author {
+  font-size: 12px;
+}
+.comment-author .separator {
+  margin: 0 7px;
+}
+.comment-author a {
+  font-weight: bold;
+  color: #986b6b;
+}
+.comment-author a:hover {
+  color: #af592a;
+}
+.comment-date {
+  color: #928c8a;
+  margin-left: 5px;
+}
+@media (max-width: 479px) {
+  .comment-list {
+    padding: 20px 15px;
+  }
+  .comment-list .children {
+    padding-left: 0;
+  }
+*/
+}

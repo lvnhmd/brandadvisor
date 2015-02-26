@@ -1907,6 +1907,7 @@ img.alignright {
 /*-----------------------------------*/
 /* Comments */
 /*-----------------------------------*/
+/*
 .comments-section {
   clear: both;
   background: url(images/post-bg-pattern-1.png) #fffefb;
@@ -1917,12 +1918,15 @@ img.alignright {
 .comments-section .tf-form {
   margin-bottom: 0;
 }
+*/
+/*
 .comment-list {
   background-color: rgba(233, 230, 225, 0.6);
   border-top: 1px dashed #c8c6c1;
   border-bottom: 1px dashed #c8c6c1;
   padding: 25px;
 }
+*/
 .comment-list li.comment {
   position: relative;
   clear: both;
