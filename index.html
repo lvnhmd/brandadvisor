@@ -70,14 +70,14 @@
         <div class="container">
             <!--content-->
             <div class="content " role="main">
-                <div class="row">
+                <div class="row" ng-repeat='brand in brands'>
                     <!-- Profile -->
                     <div class="widget-container widget-profile boxed">
                         <div class="inner clearfix">
-                            <div class="avatar"><img src="logos/eu.bape.com.png" alt="" />
+                            <div class="avatar"><img src="{{brand.logo}}" alt="" />
                             </div>
                             <div class="col-sm-6">
-                                <span class="subtitle"><a href="http://eu.bape.com" target="_new" title="2 topics">A BATHING APE</a></span>
+                                <span class="subtitle"><a href="{{brand.url}}" target="_new" title="2 topics">{{brand.name}}</a></span>
                             </div>
                             <!-- Rating Stars -->
                             <div class="col-sm-6">
@@ -108,28 +108,24 @@
                             </div>
                             <div class="col-sm-6">
                                 <div class="tagcloud">
-                                    <a href="#" ng-repeat='tag in tags track by $index'title="{{$index + 1}} topics"><span>{{tag}}</span></a>
+<!--                                    <a href="#" ng-repeat='tag in brand.keywords track by $tag_index' title="{{$tag_index + 1}} topics"><span>{{tag}}</span></a>-->
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!--/  container-->
-
             </div>
+        </div> <!--/  container-->
             <!--/  body-wrap-->
             <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.js'></script>
             <script>
                 var app = angular.module('app', [])
-                app.controller('IndexController', function ($scope) {
-                    console.log('init tagcloud')
-                    $scope.tags = [
-                        't-shirt',
-                        'tshirt',
-                        'jacket',
-                        'wallet',
-                        'hoody'
-                    ];
+                app.controller('IndexController', function ($scope,$http) {
+                    $http.get('http://localhost:3000/api/brands')
+                    .success(function (brands) {
+                        $scope.brands = brands
+                    })
+
                 });
             </script>
 </body>

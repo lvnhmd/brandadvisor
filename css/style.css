@@ -2811,7 +2811,7 @@ td.ui-datepicker-other-month span{color: #bcbcbc;}
 		position: absolute;
 		top: 30px;
 		left: -30px;
-		background: url(images/comment_say.png);
+/*		background: url(images/comment_say.png);*/
 		z-index: 10;
 }
 
