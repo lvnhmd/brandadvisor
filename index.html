@@ -41,7 +41,7 @@
 <![endif]-->
 </head>
 
-<body ng-app='app' ng-controller='ListCtrl'>
+<body ng-app='app' ng-controller='IndexController'>
     <div class="body-wrap">
         <div class="intro-header">
             <div class="container">
@@ -95,7 +95,6 @@
                                 <div class="col-sm-6">
                                     <div class="comment-body">
                                         <div class="comment-text">
-
                                             <div class="ba_comment-avatar">
                                                 <img src="images/temp/avatar3.png" alt="" />
                                             </div>
@@ -105,17 +104,11 @@
                                         </div>
                                     </div>
                                 </div>
-
                                 <!--/ Profile -->
-
                             </div>
                             <div class="col-sm-6">
                                 <div class="tagcloud">
-                                    <a href="#" title="2 topics"><span>t-shirt</span></a>
-                                    <a href="#" title="3 topics"><span>tshirt</span></a>
-                                    <a href="#" title="4 topics"><span>jacket</span></a>
-                                    <a href="#" title="5 topics"><span>wallet</span></a>
-                                    <a href="#" title="6 topics"><span>hoody</span></a>
+                                    <a href="#" ng-repeat='tag in tags track by $index'title="{{$index + 1}} topics"><span>{{tag}}</span></a>
                                 </div>
                             </div>
                         </div>
@@ -128,18 +121,15 @@
             <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.js'></script>
             <script>
                 var app = angular.module('app', [])
-                app.controller('ListCtrl', function ($scope) {
-                    console.log('init items')
-                    $scope.list_items = [
-                'Item 1',
-                'Item 2',
-                'Item 3'
-            ];
-                    console.log('post init items')
-                    $scope.addListItem = function () {
-                        console.log('push an item')
-                        $scope.list_items.push('Item 4')
-                    }
+                app.controller('IndexController', function ($scope) {
+                    console.log('init tagcloud')
+                    $scope.tags = [
+                        't-shirt',
+                        'tshirt',
+                        'jacket',
+                        'wallet',
+                        'hoody'
+                    ];
                 });
             </script>
 </body>

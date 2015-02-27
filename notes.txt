@@ -25,3 +25,10 @@ E-CLOTH http://www.e-cloth.com/ cloth,mop
 
 mongo brandadvisor
 use brandadvisor
+
+
+1.add package.json,server.js,db.js
+2.cd Users/alie/Desktop/BrandAdvisor/MEAN
+3.npm install --save express
+4.npm install --save body-parser
+5.npm install --save mongoose
