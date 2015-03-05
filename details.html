@@ -1,0 +1,314 @@
+<!doctype html>
+<!--[if lt IE 7 ]><html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]><html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta name="author" content="ThemeFuse">
+<meta name="keywords" content="">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Skinny Frames | Blog</title>
+
+<!-- main JS libs  -->
+<script src="js/libs/modernizr.min.js"></script>
+<script src="js/libs/jquery-1.10.2.min.js"></script>
+<script src="js/libs/jquery-ui.min.js"></script>
+<script src="js/libs/bootstrap.min.js"></script>
+
+<!-- Style CSS-->
+<link href="css/bootstrap.css" media="screen" rel="stylesheet">
+<link href="css/style.css" media="screen" rel="stylesheet">
+
+<!-- General Scripts -->
+<script src="js/general.js"></script>
+
+<!-- custom input -->
+<script src="js/jquery.customInput.js"></script>
+<script type="text/javascript" src="js/custom.js"></script>
+
+<!-- Lightbox prettyPhoto -->
+<link href="css/prettyPhoto.css" rel="stylesheet">
+<script src="js/jquery.prettyPhoto.js"></script>
+
+<!-- Calendar -->
+<script src="js/jquery-ui.multidatespicker.js"></script>
+
+<!-- Video Player  -->
+<link href="css/video-js.css" rel="stylesheet">
+<script src="js/video.js"></script>
+<script>
+    videojs.options.flash.swf = "js/video-js.swf";
+</script>
+
+<!-- Audio Player  -->
+<link href="css/jplayer.css" rel="stylesheet">
+<script src="js/jquery.jplayer.min.js"></script>
+<script src="js/jplayer.playlist.min.js"></script>
+<script type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function(){
+
+        new jPlayerPlaylist({
+            jPlayer: "#jquery_jplayer_1",
+            cssSelectorAncestor: "#jp_container_1"
+        }, [
+            {
+                title:"<span class='item-artist'>Rihanna - </span><span class='item-song'>Only Girl</span><img class='item-image' src='images/temp/music-player-1.jpg' alt='' />",
+                mp3:"http://www.jplayer.org/audio/mp3/TSP-05-Your_face.mp3",
+                oga:"http://www.jplayer.org/audio/ogg/TSP-05-Your_face.ogg"
+            },
+            {
+                title:"<span class='item-artist'>Yaki Da - </span><span class='item-song'>Dancing</span><img class='item-image' src='images/temp/music-player-2.jpg' alt='' />",
+                mp3:"http://www.jplayer.org/audio/mp3/TSP-07-Cybersonnet.mp3",
+                oga:"http://www.jplayer.org/audio/ogg/TSP-07-Cybersonnet.ogg"
+            },
+            {
+                title:"<span class='item-artist'>Pandora - </span><span class='item-song'>Sands of Time</span><img class='item-image' src='images/temp/music-player-3.jpg' alt='' />",
+                mp3:"http://www.jplayer.org/audio/mp3/Miaow-07-Bubble.mp3",
+                oga:"http://www.jplayer.org/audio/ogg/Miaow-07-Bubble.ogg"
+            }
+        ], {
+            swfPath: "js",
+            supplied: "oga, mp3",
+            wmode: "window",
+            smoothPlayBar: false,
+            keyEnabled: false
+        });
+    });
+    //]]>
+</script>
+
+<!--[if lt IE 9]><script src="js/respond.min.js"></script><![endif]-->
+<!--[if gte IE 9]>
+<style type="text/css">
+    .gradient {filter: none !important;}
+</style>
+<![endif]-->
+</head>
+
+<body>
+<div class="body-wrap">
+	<div class="container">
+
+        <div class="row" ng-repeat='brand in brands'>
+                    <!-- Profile -->
+                    <div class="widget-container widget-profile boxed" onclick="alert('hello')">
+                        <div class="inner clearfix">
+                            <div class="avatar"><img src="{{brand.logo}}" alt="" />
+                            </div>
+                            <div class="col-sm-6">
+                                <span class="subtitle"><a href="{{brand.url}}" target="_new" title="2 topics">{{brand.name}}</a></span>
+                            </div>
+                            <!-- Rating Stars -->
+                            <div class="col-sm-6">
+                                <div class="rating">
+                                    <span class="star on" rel="1"></span>
+                                    <span class="star on" rel="2"></span>
+                                    <span class="star on" rel="3"></span>
+                                    <span class="star off" rel="4"></span>
+                                    <span class="star off" rel="5"></span>
+                                </div>
+                            </div>
+                            <!--/ Rating Stars -->
+
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="comment-body">
+                                        <div class="comment-text">
+                                            <div class="ba_comment-avatar">
+                                                <img src="images/temp/avatar3.png" alt="" />
+                                            </div>
+                                            <div class="comment-entry">He made his film debut with a minor part in Back to the Future Part II (1989), then landed a succession.</div>
+                                            <div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--/ Profile -->
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="tagcloud">
+                                    <a href="#" ng-repeat='tag in brand.keywords' title="{{$index + 1}} topics"><span>{{tag}}</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+		<!-- row-->
+		<div class="row">
+			<div class="col-sm-8">
+				<!-- content -->
+				<div class="content">
+
+					<!-- post comments -->
+					<div class="comment-list clearfix" id="comments">
+						<h2>4 Readers Commented</h2>
+						<a href="#addcomments" class="link-add-comment anchor">Join Discussion</a>
+
+						<ol>
+							<li class="comment">
+								<div class="comment-body">
+									<div class="comment-avatar">
+										<div class="avatar"><img src="images/temp/avatar1.png" alt="" /></div>
+									</div>
+									<div class="comment-text">
+										<div class="comment-author clearfix">
+											<a href="#" class="link-author">Brad Pit</a>
+										</div>
+										<div class="comment-entry">
+											William Bradley "Brad" Pitt is an American actor and film producer. Pitt has received four Academy Award nominations and five Golden Globe.
+										</div>
+									</div>
+								</div>
+							</li>
+
+							<li class="comment">
+								<div class="comment-body">
+									<div class="comment-avatar">
+										<div class="avatar"><img src="images/temp/avatar2.png" alt="" /></div>
+									</div>
+									<div class="comment-text">
+										<div class="comment-author clearfix">
+											<a href="#" class="link-author">Ari Gold</a>
+
+										</div>
+										<div class="comment-entry">
+                                            Ari Gold is Vincent Chase's neurotic movie agent. He was an undergrad at Harvard University before earning his J.D./M.B.A. at the University of Michigan. In addition to reprising the role for the upcoming prequels of
+										</div>
+									</div>
+								</div>
+								<!-- comment reply -->
+								<ul class="children">
+									<li class="comment">
+										<div class="comment-body">
+											<div class="comment-avatar">
+												<div class="avatar"><img src="images/temp/avatar3.png" alt="" /></div>
+											</div>
+											<div class="comment-text">
+												<div class="comment-author clearfix">
+													<a href="#" class="link-author">Elijah Wood</a>
+
+												</div>
+												<div class="comment-entry">
+													Elijah Wood is an American actor best known for Frodo.
+												</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+								<!--/ comment reply -->
+							</li>
+
+							<li class="comment">
+								<div class="comment-body">
+									<div class="comment-avatar">
+										<div class="avatar"><img src="images/temp/avatar4.png" alt="" /></div>
+									</div>
+									<div class="comment-text">
+										<div class="comment-author clearfix">
+											<a href="#" class="link-author">Superman</a>
+
+										</div>
+										<div class="comment-entry">
+                                            Superman is a fictional character, a comic book superhero who appears in comic books published by DC Comics.
+										</div>
+									</div>
+								</div>
+							</li>
+
+						</ol>
+					</div>
+					<!--/ post comments -->
+
+					<!-- comment form -->
+					<div class="add-comment with_ava boxed" id="addcomments">
+						<div class="comment-form">
+							<form action="#" method="post" id="commentForm">
+                                <div class="user-avatar">
+                                    <div class="avatar"><img src="images/temp/avatar5.png" alt="" /></div>
+                                </div>
+								<div class="form-inner clearfix">
+									<div class="field_text">
+										<label for="name" class="label_title">Name</label>
+										<input type="text" name="name" id="name" value="" class="required" />
+									</div>
+									<div class="field_text omega">
+										<label for="email" class="label_title">Email</label>
+										<input type="text" name="email" id="email" value="" class="required" />
+									</div>
+                                    <div class="clearfix"></div>
+									<div class="field_text field_textarea">
+										<label for="message" class="label_title">Message</label>
+										<textarea name="message" id="message" class="required"></textarea>
+									</div>
+								</div>
+                                <div class="rowSubmit clearfix">
+                                    <span class="btn btn-small pull-left"><input type="submit" id="send" value="Add Comment" /></span>
+                                    <a class="btn btn-small btn-gray" onclick="document.getElementById('commentForm').reset();return false" href="#"><span>Discard</span></a>
+                                </div>
+							</form>
+						</div>
+					</div>
+					<!--/ comment form -->
+
+					<!-- pagination -->
+                    <div class="pagination">
+                        <a href="#" class="btn btn-left btn-large"><span>Left</span></a>
+                        <div class="inner">
+                            <div class="inner-links">
+                                <a href="#" class="page-numbers">1</a>
+                                <a href="#" class="page-numbers">2</a>
+                                <a href="#" class="page-numbers">3</a>
+                                <a href="#" class="page-numbers">4</a>
+                                <a href="#" class="page-numbers">5</a>
+                                &hellip;
+                                <a href="#" class="page-numbers">12</a>
+                                <a href="#" class="page-numbers">13</a>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-right btn-large active"><span>Right</span></a>
+                    </div>
+                    <!--/ pagination -->
+                    <br />
+                    <a href="#" class="btn btn-large"><span>Load More Stories</span></a>
+				</div>
+				<!--/ content -->
+			</div>
+		</div>
+		<!--/ row-->
+
+		<!-- row-->
+		<div class="row">
+			<!-- content -->
+			<div class="dividers clearfix">
+
+				<div class="col-sm-12"><div class="divider"></div></div>
+				<div class="col-sm-6"><div class="divider"></div></div>
+				<div class="col-sm-6"><div class="divider"></div></div>
+				<div class="col-sm-4"><div class="divider"></div></div>
+				<div class="col-sm-4"><div class="divider"></div></div>
+				<div class="col-sm-4"><div class="divider"></div></div>
+                <div class="clearfix"></div>
+				<div class="col-sm-12"><div class="divider dashed"></div></div>
+				<div class="col-sm-6"><div class="divider dashed"></div></div>
+				<div class="col-sm-6"><div class="divider dashed"></div></div>
+				<div class="col-sm-4"><div class="divider dashed"></div></div>
+				<div class="col-sm-4"><div class="divider dashed"></div></div>
+				<div class="col-sm-4"><div class="divider dashed"></div></div>
+
+			</div>
+			<!--/ content -->
+		</div>
+		<!--/ row-->
+
+	</div>
+	<!--/ container-->
+
+</div>
+</body>
+</html>
