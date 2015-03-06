@@ -23,6 +23,22 @@ D SQUARED http://www.dsquared2.com/ jeans,jogging,bottoms,t-shirt,tshirt,eau de 
 
 E-CLOTH http://www.e-cloth.com/ cloth,mop
 
+---------------------Mongo----------------------------
+
+Step 1 - Installation ( Don't follow this step if you have already installed MongoDB ):
+
+brew update
+brew install mongodb
+Step 2 - Run Mongo Daemon:
+
+mkdir -p /data/db
+sudo mongod
+Step 3 - Run Mongo Shell Interface:
+
+mongo
+
+-------------------------------------------------------
+
 mongo brandadvisor
 use brandadvisor
 
