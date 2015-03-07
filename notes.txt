@@ -48,3 +48,8 @@ use brandadvisor
 3.npm install --save express
 4.npm install --save body-parser
 5.npm install --save mongoose
+
+node server.js
+
+npm install --global gulp
+npm install --save gulp
