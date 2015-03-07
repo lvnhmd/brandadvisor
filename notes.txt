@@ -29,6 +29,7 @@ Step 1 - Installation ( Don't follow this step if you have already installed Mon
 
 brew update
 brew install mongodb
+
 Step 2 - Run Mongo Daemon:
 
 mkdir -p /data/db
@@ -49,7 +50,22 @@ use brandadvisor
 4.npm install --save body-parser
 5.npm install --save mongoose
 
+npm install --save nodemon
+nodemon server.js 8000 
+
+
 node server.js
 
 npm install --global gulp
 npm install --save gulp
+npm install --save gulp-concat
+npm install --save gulp-uglify
+npm install --save gulp-ng-annotate
+npm install --save gulp-sourcemaps
+npm install --save gulp-stylus
+npm install --save gulp-nodemon
+
+gulp js
+gulp watch:js
+
+
