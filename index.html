@@ -72,7 +72,7 @@
             <div class="content " role="main">
                 <div class="row" ng-repeat='brand in brands'>
                     <!-- Profile -->
-                    <div class="widget-container widget-profile boxed">
+                    <div class="widget-container widget-profile boxed" onclick="alert('hello')">
                         <div class="inner clearfix">
                             <div class="avatar"><img src="{{brand.logo}}" alt="" />
                             </div>
@@ -106,16 +106,17 @@
                                 </div>
                                 <!--/ Profile -->
                             </div>
-                            <div class="col-sm-6">
+                            <div class="col-sm-12">
                                 <div class="tagcloud">
-<!--                                    <a href="#" ng-repeat='tag in brand.keywords track by $tag_index' title="{{$tag_index + 1}} topics"><span>{{tag}}</span></a>-->
+                                    <a href="#" ng-repeat='tag in brand.keywords' title="{{$index + 1}} topics"><span>{{tag}}</span></a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div> <!--/  container-->
+        </div>
+        <!--/  container-->
             <!--/  body-wrap-->
             <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.js'></script>
             <script>
@@ -124,8 +125,8 @@
                     $http.get('http://localhost:3000/api/brands')
                     .success(function (brands) {
                         $scope.brands = brands
+                        console.log(brands)
                     })
-
                 });
             </script>
 </body>
