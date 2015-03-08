@@ -64,8 +64,23 @@ npm install --save gulp-ng-annotate
 npm install --save gulp-sourcemaps
 npm install --save gulp-stylus
 npm install --save gulp-nodemon
+npm install --save jwt-simple
+npm install --save lodash
+npm install --save bcrypt
 
 gulp js
 gulp watch:js
+
+curl -X POST -d '{"username": "dickeyxxx"}' -H "Content-Type: application/json" localhost:3000/session
+curl -H "X-Auth: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6ImRpY2tleXh4eCJ9.0w1RshE-2k7r94VmFZeSH_JBOTAg90EecznduMwaEGc" localhost:3000/user
+
+node
+require('bcrypt').hashSync('pass', 10)
+require('bcrypt').compareSync('pass', '$2a$10$Jmo/n32ofSM9JvzfH0z6Me6TMyn6C/U9JhzDG8xhQC4ExHMG1jXz2')
+
+
+
+
+
 
 
