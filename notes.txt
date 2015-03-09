@@ -74,6 +74,10 @@ gulp watch:js
 curl -X POST -d '{"username": "dickeyxxx"}' -H "Content-Type: application/json" localhost:3000/session
 curl -H "X-Auth: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6ImRpY2tleXh4eCJ9.0w1RshE-2k7r94VmFZeSH_JBOTAg90EecznduMwaEGc" localhost:3000/user
 
+curl -X POST -d '{"username": "ella", "password": "bella"}' -H "Content-Type: application/json" localhost:3000/api/users
+curl -H "X-Auth: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6ImRpY2tleXh4eCJ9.0w1RshE-2k7r94VmFZeSH_JBOTAg90EecznduMwaEGc" localhost:3000/api/users
+
+
 node
 require('bcrypt').hashSync('pass', 10)
 require('bcrypt').compareSync('pass', '$2a$10$Jmo/n32ofSM9JvzfH0z6Me6TMyn6C/U9JhzDG8xhQC4ExHMG1jXz2')
