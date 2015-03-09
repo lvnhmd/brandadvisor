@@ -15,7 +15,8 @@ router.post('/', function (req, res, next) {
       if (err) { return next(err) }
       if (!valid) { return res.sendStatus(401) }
       var token = jwt.encode({username: username}, config.secret)
-      res.json(token)
+      console.log("sessions.js generated :" + token)
+      res.send(token)
     })
   })
 })
